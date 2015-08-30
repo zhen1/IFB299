@@ -77,6 +77,8 @@ else
     </form>
      
    <?php
+}
+?>
   
 </div>
 
