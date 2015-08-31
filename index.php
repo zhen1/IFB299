@@ -1,23 +1,13 @@
 <?php include "base.php"; ?>
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    
-    
-    
-    
         <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
   </head>
 
   <body>
-
-    <html>
 <div id="main">
   <div id="banner">
 
@@ -32,7 +22,7 @@
     </ul>
   </div>
 
-  <form action="members.php" method="POST">
+  <form action="login.php" method="POST">
 	<p>Username:</p><input type="text" name="user" />
 	<p>Password:</p><input type="password" name="pass" />
 	<br />
@@ -49,8 +39,6 @@
 
     
     
-    
-    
-    
+   
   </body>
 </html>

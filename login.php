@@ -20,7 +20,15 @@ $count = mysql_num_rows($result);
 
 if($count==1)
 {
-	echo 'It worked';
+	<html>
+	<h1>It worked</h1>
+	</html>
+}
+else()
+{
+	<html>
+	<h1>Didnt work</h1>
+	</html>
 }
 
 ?>
