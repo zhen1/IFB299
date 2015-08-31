@@ -6,6 +6,7 @@ $dbuser = "root"; // the username that you created, or were given, to access you
 $dbpass = "team5"; // the password that you created, or were given, to access your database
 
 $dbhandle = mysql_connect($dbhost, $dbuser, $dbpass) or die("MySQL Error: " . mysql_error());
+$dbselect = mysql_select_db($dbname, $dbhandle) or die("MySQL Error: " . mysql_error());
 
 $myusername = $_POST['user'];
 $mypassword = $_POST['pass'];
@@ -24,4 +25,3 @@ if($count==1)
 
 ?>
 
-mysql_select_db($dbname) or die("MySQL Error: " . mysql_error());
