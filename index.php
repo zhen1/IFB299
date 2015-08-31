@@ -1,38 +1,13 @@
-<!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    
-    
-    
-    
-        <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
-  </head>
-
-  <body>
-
-    <html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>User Management System (Tom Cameron for NetTuts)</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>  
+<body>  
 <div id="main">
-  <div id="banner">
-
-  </div>
-  <div id="menu">
-    <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="aboutus.php">About Us</a></li>
-      <li><a href="contactus.php">Contact Us</a></li>
-      <li><a href="suppliers.php">Suppliers</a></li>
-      <li><a href="members.php">Members</a></li>
-    </ul>
-  </div>
-  <p>Home Page!</p>
-  
-  <?php
+<?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 {
      ?>
@@ -87,17 +62,7 @@ else
    <?php
 }
 ?>
-  
+ 
 </div>
-  <div id="footer">
-    
-  </div>
-
-</html>
-    
-    
-    
-    
-    
-  </body>
+</body>
 </html>
