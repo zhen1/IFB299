@@ -24,7 +24,7 @@
   </div>
   <p>Members Page</p>
   
-  <?php
+<?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 {
      ?>
