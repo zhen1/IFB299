@@ -2,7 +2,7 @@
 session_start();
  
 $dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ
-$dbname = "users"; // the name of the database that you are going to use for this project
+$dbname = "mysql"; // the name of the database that you are going to use for this project
 $dbuser = "root"; // the username that you created, or were given, to access your database
 $dbpass = "team5"; // the password that you created, or were given, to access your database
  
