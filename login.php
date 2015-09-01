@@ -23,7 +23,7 @@
         if($count==1)
         {
 			$seconds = 86400 + time();
-			setcookie(loggedin, date("F jS - g:i a"), )
+			setcookie(loggedin, date("F jS - g:i a"), $seconds);
 			header("location:login_success.php");
         }
 		else
