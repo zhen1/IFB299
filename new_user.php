@@ -37,43 +37,40 @@
 ?>
 
 <html>
+	<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="css/style.css">
+	</head>
 	<body>
-	  <body>
-<div id="main">
-  <div id="banner">
+		<div id="main">
+		<div id="banner">
 
-  </div>
-  <div id="menu">
-    <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="aboutus.php">About Us</a></li>
-      <li><a href="contactus.php">Contact Us</a></li>
-      <li><a href="suppliers.php">Suppliers</a></li>
-      <li><a href="members.php">Members</a></li>
-    </ul>
-  </div>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="aboutus.php">About Us</a></li>
+				<li><a href="contactus.php">Contact Us</a></li>
+				<li><a href="suppliers.php">Suppliers</a></li>
+				<li><a href="members.php">Members</a></li>
+			</ul>
+		</div>
   
-  <h1>Signup</h1>
-			<form action="new_user.php" method="POST">
-				<p>First Name:</p><input type="text" name="fname" />
-				<p>Last Name:</p><input type="text" name="lname" />
-				<p>Username:</p><input type="text" name="user" />
-				<p>Password:</p><input type="password" name="pass" />
-				<p>Email:</p><input type="text" name="email" />
-				<p>Phone Number:</p><input type="text" name="phone" />
-				<p>Address:</p><input type="text" name="address" />
-				<br />
-				<input type="submit" value="Signup" />
-			</form>
-  
-</div>
-
-  <div id="footer">
+	<h1>Signup</h1>
+	<form action="new_user.php" method="POST">
+		<p>First Name:</p><input type="text" name="fname" />
+		<p>Last Name:</p><input type="text" name="lname" />
+		<p>Username:</p><input type="text" name="user" />
+		<p>Password:</p><input type="password" name="pass" />
+		<p>Email:</p><input type="text" name="email" />
+		<p>Phone Number:</p><input type="text" name="phone" />
+		<p>Address:</p><input type="text" name="address" />
+		<br />
+		<input type="submit" value="Signup" />
+	</form>
+	</div>
+	<div id="footer">
     
-  </div>
-
-    
-    
-   
-  </body>
+	</div>
+	</body>
 </html>
