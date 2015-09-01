@@ -1,38 +1,29 @@
-
 <?php
 # Fill our vars and run on cli
 # $ php -f db-connect-test.php
 $dbname = 'mysql';
-$dbuser = 'root';
-$dbpass = 'team5';
-$dbhost = 'localhost';
+$username = 'root';
+$password = 'team5';
+$servername = 'localhost';
+$dbtable = 'login';
 
-$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'$
-mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-$test_query = "SHOW TABLES FROM $dbname";
-$result = mysql_query('$test_query');
-$tblCnt = 0;
-while($tbl = mysql_fetch_array($result)) {
-  $tblCnt++;
-  #echo $tbl[0]."<br />\n";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-if (!$tblCnt) {
-  echo "There are no tables<br />\n";
+
+$sql = "SELECT id FROM $dbtable";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. "<br>";
+    }
 } else {
-  echo "There are $tblCnt tables<br />\n";
-}
-
-$userrequest = "SELECT id, FROM login"
-$result = $conn->query($userrequest);
-
-if ($result->num_rows > 0)
-{
-while $row = $result->fetch_assoc()) {
-echo "id: " . $row["id"]. "<br>";
-}
-}
-else {
-echo "0 results";
+    echo "0 results";
 }
 $conn->close();
 ?>
