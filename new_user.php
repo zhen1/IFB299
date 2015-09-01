@@ -21,10 +21,17 @@
 			$phone = $_POST['phone'];
 			$address = $_POST['address'];
 		
-			mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address')"); 
-			echo("User created successfully");
+			$query = mysql_query("SELECT * FROM $table WHERE Username='$user'");
+			if(mysql_num_rows($query) > 0)
+			{
+				echo 'Username already taken';
+			}
+			else
+			{
+				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address')"); 
+				echo("User created successfully");
+			}
 		}
-		
 		
 		mysql_close();
 ?>
