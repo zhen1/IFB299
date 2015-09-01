@@ -38,7 +38,22 @@
 
 <html>
 	<body>
-		<h1>Signup</h1>
+	  <body>
+<div id="main">
+  <div id="banner">
+
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="aboutus.php">About Us</a></li>
+      <li><a href="contactus.php">Contact Us</a></li>
+      <li><a href="suppliers.php">Suppliers</a></li>
+      <li><a href="members.php">Members</a></li>
+    </ul>
+  </div>
+  
+  <h1>Signup</h1>
 			<form action="new_user.php" method="POST">
 				<p>First Name:</p><input type="text" name="fname" />
 				<p>Last Name:</p><input type="text" name="lname" />
@@ -50,5 +65,15 @@
 				<br />
 				<input type="submit" value="Signup" />
 			</form>
-	</body>
+  
+</div>
+
+  <div id="footer">
+    
+  </div>
+
+    
+    
+   
+  </body>
 </html>
