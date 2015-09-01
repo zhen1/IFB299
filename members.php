@@ -23,6 +23,15 @@
     </ul>
   </div>
 
+    <form action="login.php" method="POST">
+	<p>Username:</p><input type="text" name="user" />
+	<p>Password:</p><input type="password" name="pass" />
+	<br />
+	<input type="submit" value="Login" />
+	<form action="new_user.php">
+    <input type="submit" value="Signup">
+</form>
+  </form>
   
 </div>
 
