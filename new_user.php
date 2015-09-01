@@ -3,7 +3,7 @@
         $password = "team5";
         $hostname = "localhost";
         $database = "mysql";
-        $table = "login";
+        $table = "logins";
 
         $dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
         $selecttable = mysql_select_db($database, $dbhandle);
@@ -21,7 +21,7 @@
 			$phone = $_POST['phone'];
 			$address = $_POST['address'];
 		
-			mysql_query("INSERT INTO login (first Name, Last Name, Username, Password, Email, Phone Number, Address) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address')"); 
+			mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address')"); 
 			echo("User created successfully");
 		}
 		
