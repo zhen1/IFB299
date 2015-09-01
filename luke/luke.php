@@ -1,8 +1,15 @@
 <html>
 
 <?php
-$sql = "SELECT * FROM `testTable` LIMIT 0, 30 ";
-echo $sql
+$c = mysql_connect("localhost", "root", "team5");
+mysql_select_db("Luke");
+
+$result = mysql_query("SELECT * FROM `testTable`");
+
+$row = mysql_fetch_assoc($result);
+
+echo htmlentities($row['_message']);
+
 ?>
 
 </html>
