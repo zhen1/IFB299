@@ -235,12 +235,23 @@ session_start();
                                 {
                                     $error=$_GET["error"];
                                 }
-                                if($error!=0)
+                                if($error==1)
                                 {
                                     echo '<tr id="err_msg">
                                     <td class="auto-style3">&nbsp;</td>
                                     <td class="auto-style2" colspan="2"; align="center" style="color:white; background-color:maroon; font-family:'.'Palatino Linotype'.'; font-size:11pt">
                                     Invalid Username/Password/Type
+                                    </td>
+                                    <td class="auto-style14">&nbsp;</td>
+                                    </tr>';
+                                    $_SESSION['login']=0;
+                                }
+                                else if($error==2)
+                                {
+                                    echo '<tr id="err_msg">
+                                    <td class="auto-style3">&nbsp;</td>
+                                    <td class="auto-style2" colspan="2"; align="center" style="color:white; background-color:maroon; font-family:'.'Palatino Linotype'.'; font-size:11pt">
+                                    This Volunteer Account is Still Pending
                                     </td>
                                     <td class="auto-style14">&nbsp;</td>
                                     </tr>';
