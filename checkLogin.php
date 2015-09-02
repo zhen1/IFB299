@@ -20,8 +20,8 @@ if ($result->num_rows > 0)
 {
     while($row = $result->fetch_assoc()) 
     {
-        die($row["ispending"]);
-        
+        //die($row["ispending"]);
+
         if($row["ispending"]=='1')
         {
             $_SESSION['login']=0;
