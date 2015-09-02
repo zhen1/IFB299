@@ -66,7 +66,7 @@ else
     }
     else
     {
-        $sql = "insert into tbl_userinfo (fullname, contact, email, password, address, postcode, jobpostcode, usertype) values ('".$fullname."','".$contact."','".$email."','".$password."','".$address."','".$jobpostcode."','".$postcode."','volunteer')";
+        $sql = "insert into tbl_userinfo (fullname, contact, email, password, address, postcode, jobpostcode, usertype, ispending) values ('".$fullname."','".$contact."','".$email."','".$password."','".$address."','".$jobpostcode."','".$postcode."','volunteer','1')";
         
         if ($conn->query($sql) === TRUE) 
         {
