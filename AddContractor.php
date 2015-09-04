@@ -21,7 +21,7 @@ $notes = $_POST['notes'];
 //Insert new company into the database
 mysql_query("INSERT INTO $table (businessName, address, postcode, contactName, notes) VALUES ('$businessName', '$address', '$postcode', '$contactName', '$notes')");
 mysql_close();
-echo "submitted!";
+header("Location:contractor_add.php?success=1");
  
 
 ?>
