@@ -20,7 +20,7 @@ $result = mysql_query($query);
 $rows = mysql_numrows($result);
 
 $i=0;
-while($i < $rows){
+while($i < 10){
 
 $contractorID = mysql_result($result,$i,"contractorID");
 $businessName = mysql_result($result,$i,"businessName");
