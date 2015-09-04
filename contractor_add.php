@@ -10,7 +10,7 @@
 
 <body>
 
-<h1>Add Contractor</h1>
+<h1>Add New Contractor</h1>
 <?php
 $success=$_GET['success'];
 	if ($success == "1"){
@@ -34,11 +34,11 @@ $success=$_GET['success'];
 		</tr>
 		<tr>
 			<td style="width: 236px">State:</td>
-			<td><input maxlength="3" name="state" size="3" type="text" /></td>
+			<td><input maxlength="3" name="state" size="5" type="text" /></td>
 		</tr>
 		<tr>
 			<td style="width: 236px">Postcode:</td>
-			<td><input maxlength="4" name="postcode" size="4" type="text" /></td>
+			<td><input maxlength="4" name="postcode" size="5" type="text" /></td>
 		</tr>
 		<tr>
 			<td style="width: 236px; height: 26px;">Contact Name:</td>
@@ -48,7 +48,7 @@ $success=$_GET['success'];
 		<tr>
 			<td style="width: 236px">Phone Number:</td>
 			<td>
-			<input name="phoneNumber" type="text" maxlength="10" size="10" /></td>
+			<input name="phoneNumber" type="text" maxlength="10" size="12" /></td>
 		</tr>
 		<tr>
 			<td style="width: 236px">Email Address:</td>
@@ -62,7 +62,7 @@ $success=$_GET['success'];
 		</tr>
 		<tr>
 			<td style="width: 236px">
-			<input name="clearButton" type="button" value="Clear" /></td>
+			<input name="clearButton" type="reset" value="Clear" /></td>
 			<td><input name="addButton" type="submit" value="Add" /></td>
 		</tr>
 	</table>
