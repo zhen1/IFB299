@@ -1,3 +1,5 @@
+<html>
+<p>
 <?php
 
 //Connection to MySQL
@@ -39,3 +41,5 @@ echo "$contractorID $businessName $street $suburb $state $postcode $contactName 
 mysql_close();
 
 ?>
+</p>
+</html>
