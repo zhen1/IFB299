@@ -41,14 +41,14 @@ $success=$_GET['success'];
 			<td><input maxlength="4" name="postcode" size="4" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Contact Name:</td>
-			<td>
+			<td style="width: 236px; height: 26px;">Contact Name:</td>
+			<td style="height: 26px">
 			<input maxlength="45" name="contactName" size="45" type="text" /></td>
 		</tr>
 		<tr>
 			<td style="width: 236px">Phone Number:</td>
 			<td>
-			<input name="phoneNumber" type="text" maxlength="10" size="10" style="height: 22px" /></td>
+			<input name="phoneNumber" type="text" maxlength="10" size="10" /></td>
 		</tr>
 		<tr>
 			<td style="width: 236px">Email Address:</td>
