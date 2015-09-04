@@ -15,7 +15,6 @@
 <p>&nbsp;</p>
 <p><a href="contractor_add.php">Add Contractor</a></p>
 <p><a href="contractor_search.php">Search</a></p>
-<p><a href="contractor_home.php">Contractor Management System Home</a></p>
 
 </body>
 

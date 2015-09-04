@@ -12,12 +12,12 @@
 
 <h1>Contractor Management System</h1>
 <h2>Search by Name</h2>
-<form action="" method="post">
+<form action="scriptSearchContractorName.php" method="post">
 	<table style="width: 100%">
 		<tr>
 			<td style="width: 157px">Enter Name:</td>
 			<td>
-			<input maxlength="45" name="Text1" size="45" style="height: 22px" type="text" /></td>
+			<input maxlength="45" name="searchBox" size="45" style="height: 22px" type="text" /></td>
 		</tr>
 		<tr>
 			<td style="width: 157px">
