@@ -29,7 +29,7 @@ $success=$_GET['success'];
 		</tr>
 		<tr>
 			<td style="width: 236px">Suburb:</td>
-			<td><input name="suburb" type="text" /></td>
+			<td><input maxlength="3" name="suburb" type="text" /></td>
 		</tr>
 		<tr>
 			<td style="width: 236px">State:</td>
