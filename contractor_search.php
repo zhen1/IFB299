@@ -10,7 +10,8 @@
 
 <body>
 
-<h1>Contractor Management System - Search</h1>
+<h1>Contractor Management System</h1>
+<h2>Search</h2>
 <p><a href="contractor_search_name.php">Search by Name</a></p>
 
 </body>

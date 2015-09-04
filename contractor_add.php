@@ -10,7 +10,8 @@
 
 <body>
 
-<h1>Contractor Management System - Add New Contractor</h1>
+<h1>Contractor Management System</h1>
+<h2>Add New Contractor</h2>
 <?php
 $success=$_GET['success'];
 	if ($success == "1"){
@@ -18,53 +19,48 @@ $success=$_GET['success'];
 	}
 
 ?>
-	<form action="AddContractor.php" method="post">
-		<table style="width: 100%">
+	<form action="scriptAddContractor.php" method="post">
+		<table>
 		<tr>
-			<td style="width: 236px">Business Name:</td>
+			<td>Business Name:</td>
 			<td>
-			<input name="businessName" type="text" maxlength="45" size="45" /></td>
+			<input name="businessName" type="text" maxlength="45" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Street Number &amp; Street Name:</td>
-			<td><input name="street" type="text" maxlength="45" size="45" /></td>
+			<td>Street Number &amp; Street Name:</td>
+			<td><input name="street" type="text" maxlength="45" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Suburb:</td>
-			<td><input maxlength="45" name="suburb" size="45" type="text" /></td>
+			<td>Suburb:</td>
+			<td><input maxlength="45" name="suburb" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">State:</td>
-			<td><input maxlength="3" name="state" size="5" type="text" /></td>
+			<td>State:</td>
+			<td><input maxlength="3" name="state" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Postcode:</td>
-			<td><input maxlength="4" name="postcode" size="5" type="text" /></td>
+			<td>Postcode:</td>
+			<td><input maxlength="4" name="postcode" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px; height: 26px;">Contact Name:</td>
-			<td style="height: 26px">
-			<input maxlength="45" name="contactName" size="45" type="text" /></td>
+			<td>Contact Name:</td>
+			<td><input maxlength="45" name="contactName" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px; height: 26px;">Phone Number:</td>
-			<td style="height: 26px">
-			<input name="phoneNumber" type="text" maxlength="10" size="12" /></td>
+			<td>Phone Number:</td>
+			<td><input name="phoneNumber" type="text" maxlength="10" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Email Address:</td>
-			<td>
-			<input name="emailAddress" type="text" maxlength="45" size="45" /></td>
+			<td>Email Address:</td>
+			<td><input name="emailAddress" type="text" maxlength="45" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Notes</td>
-			<td>
-			<textarea name="notes" style="width: 419px; height: 105px" cols="45" rows="10"></textarea></td>
+			<td>Notes</td>
+			<td><textarea name="notes"></textarea></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">
-			<input name="clearButton" type="reset" value="Clear" /></td>
-			<td><input name="addButton" type="submit" value="Add" /></td>
+			<td></td>
+			<td><input name="clearButton" type="reset" value="Clear" /><input name="addButton" type="submit" value="Add" /></td>
 		</tr>
 		</table>
 </form>

@@ -10,7 +10,8 @@
 
 <body>
 
-<h1>Contractor Management System - Search by Name</h1>
+<h1>Contractor Management System</h1>
+<h2>Search by Name</h2>
 <form action="" method="post">
 	<table style="width: 100%">
 		<tr>
@@ -20,8 +21,9 @@
 		</tr>
 		<tr>
 			<td style="width: 157px">
-			<input name="clearButton" type="reset" value="Clear" /></td>
-			<td><input name="searchButton" type="submit" value="Search" /></td>
+			&nbsp;</td>
+			<td>
+			<input name="clearButton" type="reset" value="Clear" /><input name="searchButton" type="submit" value="Search" /></td>
 		</tr>
 	</table>
 </form>

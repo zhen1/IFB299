@@ -10,7 +10,8 @@
 
 <body>
 
-<h1>Contractor Management System - Home</h1>
+<h1>Contractor Management System</h1>
+<h2>Home</h2>
 <p>&nbsp;</p>
 <p><a href="contractor_add.php">Add Contractor</a></p>
 <p><a href="contractor_search.php">Search</a></p>
