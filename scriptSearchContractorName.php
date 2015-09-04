@@ -15,7 +15,7 @@ $selecttable = mysql_select_db($database, $dbhandle);
 $searchBox = $_POST['searchBox'];
 
 //Insert new company into the database and return success=1
-$query = "SELECT * FROM $table WHERE businessName LIKE '%$searchBox%'";
+$query = "SELECT * FROM $table";
 $result = mysql_query($query);
 $rows = mysql_numrows($result);
 
