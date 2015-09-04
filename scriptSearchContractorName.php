@@ -19,7 +19,7 @@ $searchBox = $_POST['searchBox'];
 //Insert new company into the database and return success=1
 $query = "SELECT * FROM $table";
 $result = mysql_query($query);
-$rows = mysql_numrows($result);
+$rows = mysql_num_rows($result);
 
 $i=0;
 while($i < 10){
