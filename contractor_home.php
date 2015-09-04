@@ -4,7 +4,8 @@
 <head>
 <meta content="en-au" http-equiv="Content-Language" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Untitled 1</title>
+<title>Contractor Management System - Home</title>
+<link href="css/contractor.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>

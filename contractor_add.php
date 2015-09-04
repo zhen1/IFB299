@@ -4,7 +4,8 @@
 <head>
 <meta content="en-au" http-equiv="Content-Language" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Untitled 1</title>
+<title>Contractor Management System - Add</title>
+<link href="css/contractor.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -17,7 +18,6 @@ $success=$_GET['success'];
 	}
 
 ?>
-<form action="AddContractor.php" method="post">
 	<table style="width: 100%">
 		<tr>
 			<td style="width: 236px">Business Name:</td>
@@ -66,7 +66,6 @@ $success=$_GET['success'];
 			<td><input name="addButton" type="submit" value="Add" /></td>
 		</tr>
 	</table>
-</form>
 
 </body>
 
