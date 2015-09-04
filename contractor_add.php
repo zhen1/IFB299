@@ -32,6 +32,10 @@ $success=$_GET['success'];
 			<td><input name="suburb" type="text" /></td>
 		</tr>
 		<tr>
+			<td style="width: 236px">State:</td>
+			<td><input name="state" type="text" /></td>
+		</tr>
+		<tr>
 			<td style="width: 236px">Postcode:</td>
 			<td><input name="postcode" type="text" /></td>
 		</tr>

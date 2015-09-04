@@ -15,6 +15,7 @@ $selecttable = mysql_select_db($database, $dbhandle);
 $businessName = $_POST['businessName'];
 $street = $_POST['street'];
 $suburb = $_POST['suburb'];
+$state = $_POST['state'];
 $postcode = $_POST['postcode'];
 $contactName = $_POST['contactName'];
 $phoneNumber = $_POST['phoneNumber'];
@@ -22,7 +23,7 @@ $emailAddress = $_POST['emailAddress'];
 $notes = $_POST['notes'];
 
 //Insert new company into the database
-mysql_query("INSERT INTO $table (businessName, street, suburb, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$businessName', '$street', '$suburb', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')");
+mysql_query("INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$businessName', '$street', '$suburb', '$state', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')");
 mysql_close();
 header("Location:contractor_add.php?success=1");
  
