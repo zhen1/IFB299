@@ -11,6 +11,7 @@
 
 <h1>Add Contractor</h1>
 <?php
+$success = 0;
 $success=$_GET['success'];
 	if ($success = "1"){
 		echo ("Contractor Added Successfully!");			
