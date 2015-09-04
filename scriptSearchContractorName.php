@@ -37,6 +37,5 @@ echo "$contractorID $businessName $street $suburb $state $postcode $contactName 
 
 }
 mysql_close();
-header("Location:contractor_add.php?success=1");
 
 ?>
