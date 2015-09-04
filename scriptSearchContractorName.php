@@ -19,12 +19,12 @@ $selecttable = mysql_select_db($database, $dbhandle);
 $searchBox = $_POST['searchBox'];
 
 //Insert new company into the database and return success=1
-$query = "SELECT * FROM $table";
+$query = "SELECT * FROM $table" WHERE businessName LIKE '%$searchBox%';
 $result = mysql_query($query);
 $rows = mysql_num_rows($result);
 
 $i=0;
-while($i < 10){
+while($i < $rows){
 
 $contractorID = mysql_result($result,$i,"contractorID");
 $businessName = mysql_result($result,$i,"businessName");
@@ -40,7 +40,6 @@ $notes = mysql_result($result,$i,"notes");
 echo "$contractorID $businessName $street $suburb $state $postcode $contactName $phoneNumber $emailAddress $notes"<br><br>"
 
 }
-echo $result
 mysql_close();
 
 ?>
