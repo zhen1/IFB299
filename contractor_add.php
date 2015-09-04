@@ -12,6 +12,8 @@
 
 <h1>Contractor Management System</h1>
 <h2>Add New Contractor</h2>
+
+<em class="successful">
 <?php
 $success=$_GET['success'];
 	if ($success == "1"){
@@ -19,6 +21,7 @@ $success=$_GET['success'];
 	}
 
 ?>
+</em>
 	<form action="scriptAddContractor.php" method="post">
 		<table>
 		<tr>
