@@ -20,20 +20,32 @@ $success=$_GET['success'];
 <form action="AddContractor.php" method="post">
 	<table style="width: 100%">
 		<tr>
-			<td style="width: 236px">Business Name</td>
+			<td style="width: 236px">Business Name:</td>
 			<td><input name="businessName" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Address</td>
-			<td><input name="address" type="text" /></td>
+			<td style="width: 236px">Street Number &amp; Street Name:</td>
+			<td><input name="street" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Postcode</td>
+			<td style="width: 236px">Suburb:</td>
+			<td><input name="suburb" type="text" /></td>
+		</tr>
+		<tr>
+			<td style="width: 236px">Postcode:</td>
 			<td><input name="postcode" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Contact Name</td>
+			<td style="width: 236px">Contact Name:</td>
 			<td><input name="contactName" type="text" /></td>
+		</tr>
+		<tr>
+			<td style="width: 236px">Phone Number:</td>
+			<td><input name="phoneNumber" type="text" /></td>
+		</tr>
+		<tr>
+			<td style="width: 236px">Email Address:</td>
+			<td><input name="emailAddress" type="text" /></td>
 		</tr>
 		<tr>
 			<td style="width: 236px">Notes</td>
