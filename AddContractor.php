@@ -19,7 +19,7 @@ $contactName = $_POST['contactName'];
 $notes = $_POST['notes'];
 
 //Insert new company into the database
-mysql_query("INSERT INTO $table (businessName, address, postcode, contactName, notes) VALUES ('$businessName', '$address', '$postcode', 'contactName', 'notes')");
+mysql_query("INSERT INTO $table (businessName, address, postcode, contactName, notes) VALUES ('$businessName', '$address', '$postcode', '$contactName', '$notes')");
  
 
 ?>
