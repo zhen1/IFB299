@@ -10,7 +10,7 @@
 
 <body>
 
-<h1>Add New Contractor</h1>
+<h1>Contractor Management System - Add New Contractor</h1>
 <?php
 $success=$_GET['success'];
 	if ($success == "1"){
@@ -18,7 +18,8 @@ $success=$_GET['success'];
 	}
 
 ?>
-	<table style="width: 100%">
+	<form action="AddContractor.php" method="post">
+		<table style="width: 100%">
 		<tr>
 			<td style="width: 236px">Business Name:</td>
 			<td>
@@ -46,8 +47,8 @@ $success=$_GET['success'];
 			<input maxlength="45" name="contactName" size="45" type="text" /></td>
 		</tr>
 		<tr>
-			<td style="width: 236px">Phone Number:</td>
-			<td>
+			<td style="width: 236px; height: 26px;">Phone Number:</td>
+			<td style="height: 26px">
 			<input name="phoneNumber" type="text" maxlength="10" size="12" /></td>
 		</tr>
 		<tr>
@@ -65,7 +66,8 @@ $success=$_GET['success'];
 			<input name="clearButton" type="reset" value="Clear" /></td>
 			<td><input name="addButton" type="submit" value="Add" /></td>
 		</tr>
-	</table>
+		</table>
+</form>
 
 </body>
 

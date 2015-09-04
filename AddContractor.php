@@ -22,7 +22,7 @@ $phoneNumber = $_POST['phoneNumber'];
 $emailAddress = $_POST['emailAddress'];
 $notes = $_POST['notes'];
 
-//Insert new company into the database
+//Insert new company into the database and return success=1
 mysql_query("INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$businessName', '$street', '$suburb', '$state', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')");
 mysql_close();
 header("Location:contractor_add.php?success=1");

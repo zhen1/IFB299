@@ -4,17 +4,14 @@
 <head>
 <meta content="en-au" http-equiv="Content-Language" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Contractor Management System - Home</title>
+<title>Contractor Management System - Search</title>
 <link href="css/contractor.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-<h1>Contractor Management System - Home</h1>
-<p>&nbsp;</p>
-<p><a href="contractor_add.php">Add Contractor</a></p>
-<p><a href="contractor_search.php">Search</a></p>
-<p>&nbsp;</p>
+<h1>Contractor Management System - Search</h1>
+<p><a href="contractor_search_name.php">Search by Name</a></p>
 
 </body>
 
