@@ -1,4 +1,6 @@
 <html>
+<head></head>
+<body>
 <p>
 <?php
 
@@ -43,4 +45,5 @@ mysql_close();
 
 ?>
 </p>
+</body>
 </html>
