@@ -38,6 +38,7 @@ $notes = mysql_result($result,$i,"notes");
 echo "$contractorID $businessName $street $suburb $state $postcode $contactName $phoneNumber $emailAddress $notes"<br><br>"
 
 }
+echo $result
 mysql_close();
 
 ?>
