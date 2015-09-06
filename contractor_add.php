@@ -3,8 +3,7 @@
 
 <head>
 <meta charset="utf-8" />
-<title>Contractor Management System - Add</title>
-<link href="contractor.css" rel="stylesheet" type="text/css" />
+<title>Contractor Management System - Add New Contractor</title>
 <link href="css/contractor.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -16,6 +15,7 @@
 <p class="information">Please complete the form to add a new contractor. All fields 
 with * are required to be completed.</p>
 <?php
+	//code checks to see if field in the form has been posted, if correct all following code executes
     if (isset($_POST['businessName'])) {
         //Connection to MySQL
         $username = "root";
@@ -48,6 +48,9 @@ with * are required to be completed.</p>
         mysql_close();
         header("Location:contractor_add.php?success=1");
     }
+    
+    //error and success messages for add operation. Error message currently not used as form fields are checked by html value.
+    //may change this if we need to implement further validation checks on the data.
     ?><em class="successful"><?php
         if (isset($_GET["success"])) {
             $success = $_GET['success'];
@@ -59,7 +62,7 @@ with * are required to be completed.</p>
         if (isset($_GET["success"])) {
             $success = $_GET['success'];
             if ($success == "0") {
-                echo ("Error! Unsuccessful, Please check all required fields have been completed correctly!");
+                echo ("Error! Unsuccessful, Please try again!");
             }
         }
         ?></em>
@@ -106,7 +109,7 @@ with * are required to be completed.</p>
 		</tr>
 		<tr>
 			<td></td>
-			<td><input name="clearButton" type="reset" value="Clear" /><input name="addButton" type="submit" value="Add" /></td>
+			<td><input name="addButton" type="submit" value="Add New Record" /></td>
 		</tr>
 	</table>
 </form>

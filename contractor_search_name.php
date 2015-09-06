@@ -4,7 +4,6 @@
 <head>
 <meta charset="utf-8" />
 <title>Contractor Management System - Search</title>
-<link href="contractor.css" rel="stylesheet" type="text/css" />
 <link href="css/contractor.css" rel="stylesheet" type="text/css">
 </head>
 
