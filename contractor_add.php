@@ -1,63 +1,104 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
 <head>
-<meta content="en-au" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="utf-8" />
 <title>Contractor Management System - Add</title>
-<link href="css/contractor.css" rel="stylesheet" type="text/css" />
+<link href="contractor.css" rel="stylesheet" type="text/css" />
+<link href="css/contractor.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
 <h1>Contractor Management System</h1>
 <h2>Add New Contractor</h2>
-
-<em class="successful">
+<hr><hr>
+<p class="information">Please complete the form to add a new contractor. All fields 
+with * are required to be completed.</p>
 <?php
-if(isset($_GET["success"])){
-	$success=$_GET['success'];
-	if ($success == "1"){
-		echo ("Contractor Added Successfully!");
-	}
-}
-	
-?>
-</em>
-	<form action="scriptAddContractor.php" method="post">
-		<table>
+    if (isset($_POST['businessName'])) {
+        //Connection to MySQL
+        $username = "root";
+        $password = "team5";
+        $hostname = "localhost";
+        $database = "IFB299db";
+        $table = "Contractors";
+
+        $dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
+        $selecttable = mysql_select_db($database, $dbhandle);
+
+
+        //Form variables for submission to database
+        $inputs = array(
+            $_POST['businessName'],
+            $_POST['street'], $_POST['suburb'],
+            $_POST['state'],
+            $_POST['postcode'],
+            $_POST['contactName'],
+            $_POST['phoneNumber'],
+            $_POST['emailAddress'],
+            $_POST['notes']);
+
+        for ($i = 0; $i < count($inputs); $i++) {
+            $inputs[$i] = mysql_real_escape_string($inputs[$i]);
+        }
+        //Insert new company into the database and return success=1
+
+        mysql_query("INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')");
+        mysql_close();
+        header("Location:contractor_add.php?success=1");
+    }
+    ?><em class="successful"><?php
+        if (isset($_GET["success"])) {
+            $success = $_GET['success'];
+            if ($success == "1") {
+                echo ("Contractor Added Successfully!");
+            }
+        }
+        ?></em><em class="unsuccessful"><?php
+        if (isset($_GET["success"])) {
+            $success = $_GET['success'];
+            if ($success == "0") {
+                echo ("Error! Unsuccessful, Please check all required fields have been completed correctly!");
+            }
+        }
+        ?></em>
+<form action="contractor_add.php" method="post">
+	<table>
 		<tr>
 			<td>Business Name:</td>
 			<td>
-			<input name="businessName" type="text" maxlength="45" /></td>
+			<input maxlength="45" name="businessName" required="" type="text" />*</td>
 		</tr>
 		<tr>
 			<td>Street Number &amp; Street Name:</td>
-			<td><input name="street" type="text" maxlength="45" /></td>
+			<td><input maxlength="45" name="street" required="" type="text" />*</td>
 		</tr>
 		<tr>
 			<td>Suburb:</td>
-			<td><input maxlength="45" name="suburb" type="text" /></td>
+			<td><input maxlength="45" name="suburb" required="" type="text" />*</td>
 		</tr>
 		<tr>
 			<td>State:</td>
-			<td><input maxlength="3" name="state" type="text" /></td>
+			<td><input maxlength="3" name="state" required="" type="text" />*</td>
 		</tr>
 		<tr>
 			<td>Postcode:</td>
-			<td><input maxlength="4" name="postcode" type="text" /></td>
+			<td><input maxlength="4" name="postcode" required="" type="text" />*</td>
 		</tr>
 		<tr>
 			<td>Contact Name:</td>
-			<td><input maxlength="45" name="contactName" type="text" /></td>
+			<td>
+			<input maxlength="45" name="contactName" required="" type="text" />*</td>
 		</tr>
 		<tr>
 			<td>Phone Number:</td>
-			<td><input name="phoneNumber" type="text" maxlength="10" /></td>
+			<td>
+			<input maxlength="10" name="phoneNumber" required="" type="text" />*</td>
 		</tr>
 		<tr>
 			<td>Email Address:</td>
-			<td><input name="emailAddress" type="text" maxlength="45" /></td>
+			<td><input maxlength="45" name="emailAddress" type="text" /></td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -67,10 +108,10 @@ if(isset($_GET["success"])){
 			<td></td>
 			<td><input name="clearButton" type="reset" value="Clear" /><input name="addButton" type="submit" value="Add" /></td>
 		</tr>
-		</table>
+	</table>
 </form>
-
-<p><a href="contractor_home.php">Contractor Management System Home</a></p>
+<hr>
+<p><a href="contractor_home.php">Return to Main Menu</a></p>
 
 </body>
 

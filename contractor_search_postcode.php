@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,13 +11,13 @@
 <body>
 
 <h1>Contractor Management System</h1>
-<h2>Search by Business Name</h2>
+<h2>Search by Postcode</h2>
 <hr><hr>
-<p class="information">Enter the contractors business name to conduct a search.</p>
-<form action="contractor_search_results.php?option=1" method="post">
+<p class="information">Enter a postcode to view all contractors located in that area.</p>
+<form action="contractor_search_results.php?option=2" method="post">
 	<table>
 		<tr>
-			<td>Enter Name:</td>
+			<td>Enter Postcode:</td>
 			<td>
 			<input maxlength="45" name="searchBox" required="" type="text" /></td>
 		</tr>

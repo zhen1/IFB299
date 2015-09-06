@@ -1,20 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
 <head>
-<meta content="en-au" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="utf-8" />
 <title>Contractor Management System - Home</title>
-<link href="css/contractor.css" rel="stylesheet" type="text/css" />
+<link href="contractor.css" rel="stylesheet" type="text/css" />
+<link href="css/contractor.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-<h1>Contractor Management System</h1>
-<h2>Home</h2>
-<p>&nbsp;</p>
+<h1>Contractor Management System</h1>		
+<h2>Main Menu</h2>
+<hr>
+<hr>
+<p class="information">Add new contractor information to the system</p>
 <p><a href="contractor_add.php">Add Contractor</a></p>
-<p><a href="contractor_search.php">Search</a></p>
+<hr>
+<p class="information">Search for existing contractor contact information</p>
+<p><a href="contractor_search_name.php">Search by Business Name</a></p>
+<p><a href="contractor_search_postcode.php">Search by Postcode</a></p>
+
+<hr>
 
 </body>
 
