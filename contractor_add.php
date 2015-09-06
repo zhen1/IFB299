@@ -24,7 +24,7 @@ with * are required to be completed.</p>
         $database = "IFB299db";
         $table = "Contractors";
 
-        $connection = mysqli_connect($hostname, $username, $password);
+        $connection = mysqli_connect($hostname, $username, $password, $database);
         if (!$connection){
         	die("Connection failed: " . mysqli_connect_error());
         }
@@ -50,7 +50,7 @@ with * are required to be completed.</p>
         $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')";
         mysqli_query($connection, $query);
         mysqli_close($connection);
-        header("Location:contractor_add.php?success=1");
+        //header("Location:contractor_add.php?success=1");
     }
     
     //error and success messages for add operation. Error message currently not used as form fields are checked by html value.
