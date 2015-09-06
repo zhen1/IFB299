@@ -24,7 +24,10 @@ with * are required to be completed.</p>
         $database = "IFB299db";
         $table = "Contractors";
 
-        $dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
+        $connection = mysqli_connect($hostname, $username, $password);
+        if (!$connection){
+        	die("Connection failed: " . mysqli_connect_error());
+        }
         $selecttable = mysql_select_db($database, $dbhandle);
 
 
@@ -45,7 +48,7 @@ with * are required to be completed.</p>
         //Insert new company into the database and return success=1
 
         mysql_query("INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')");
-        mysql_close();
+        mysqli_close($connection);
         header("Location:contractor_add.php?success=1");
     }
     
