@@ -28,7 +28,7 @@ with * are required to be completed.</p>
         if (!$connection){
         	die("Connection failed: " . mysqli_connect_error());
         }
-        $selecttable = mysql_select_db($database, $dbhandle);
+        //$selecttable = mysql_select_db($database, $dbhandle);
 
 
         //Form variables for submission to database
@@ -47,7 +47,8 @@ with * are required to be completed.</p>
         }
         //Insert new company into the database and return success=1
 
-        mysql_query("INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')");
+        $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')";
+        mysqli_query($connection, $query);
         mysqli_close($connection);
         header("Location:contractor_add.php?success=1");
     }
