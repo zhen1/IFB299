@@ -21,32 +21,33 @@ with * are required to be completed.</p>
         $username = "root";
         $password = "team5";
         $hostname = "localhost";
-        $database = "IFB299db";
-        $table = "Contractors";
+        $database = "ifb299db";
+        $table = "contractors";
 
-        $dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
-        $selecttable = mysql_select_db($database, $dbhandle);
-
+        $connection = mysqli_connect($hostname, $username, $password, $database);
+        if (!$connection){
+        	die("Connection failed: " . mysqli_connect_error());
+        }
 
         //Form variables for submission to database
-        $inputs = array(
-            $_POST['businessName'],
-            $_POST['street'], $_POST['suburb'],
-            $_POST['state'],
-            $_POST['postcode'],
-            $_POST['contactName'],
-            $_POST['phoneNumber'],
-            $_POST['emailAddress'],
-            $_POST['notes']);
+            $businessName = mysqli_real_escape_string($connection, $_POST['businessName']);
+            $street = mysqli_real_escape_string($connection, $_POST['street']); 
+            $suburb = mysqli_real_escape_string($connection, $_POST['suburb']);
+            $state = mysqli_real_escape_string($connection, $_POST['state']);
+            $postcode = mysqli_real_escape_string($connection, $_POST['postcode']);
+            $contactName = mysqli_real_escape_string($connection, $_POST['contactName']);
+            $phoneNumber = mysqli_real_escape_string($connection, $_POST['phoneNumber']);
+            $emailAddress = mysqli_real_escape_string($connection, $_POST['emailAddress']);
+            $notes = mysqli_real_escape_string($connection, $_POST['notes']);
 
-        for ($i = 0; $i < count($inputs); $i++) {
-            $inputs[$i] = mysql_real_escape_string($inputs[$i]);
-        }
         //Insert new company into the database and return success=1
 
-        mysql_query("INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')");
-        mysql_close();
+        $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$businessName', '$street', '$suburb', '$state', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')";
+        
+		mysqli_query($connection, $query);        
+        mysqli_close($connection);
         header("Location:contractor_add.php?success=1");
+
     }
     
     //error and success messages for add operation. Error message currently not used as form fields are checked by html value.

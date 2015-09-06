@@ -22,7 +22,7 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td><input name="clearButton" type="reset" value="Clear" /><input name="searchButton" type="submit" value="Search" /></td>
+			<td><input name="searchButton" type="submit" value="Search" /></td>
 		</tr>
 	</table>
 </form>
