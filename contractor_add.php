@@ -32,15 +32,15 @@ with * are required to be completed.</p>
 
 
         //Form variables for submission to database
-            $businessName = mysqli_real_escape_string($_POST['businessName']);
-            $street = mysqli_real_escape_string($_POST['street']); 
-            $suburb = mysqli_real_escape_string($_POST['suburb']);
-            $state = mysqli_real_escape_string($_POST['state']);
-            $postcode = mysqli_real_escape_string($_POST['postcode']);
-            $contactName = mysqli_real_escape_string($_POST['contactName']);
-            $phoneNumber = mysqli_real_escape_string($_POST['phoneNumber']);
-            $emailAddress = mysqli_real_escape_string($_POST['emailAddress']);
-            $notes = mysqili_real_escape_string($_POST['notes']);
+            $businessName = mysqli_real_escape_string($connection, $_POST['businessName']);
+            $street = mysqli_real_escape_string($connection, $_POST['street']); 
+            $suburb = mysqli_real_escape_string($connection, $_POST['suburb']);
+            $state = mysqli_real_escape_string($connection, $_POST['state']);
+            $postcode = mysqli_real_escape_string($connection, $_POST['postcode']);
+            $contactName = mysqli_real_escape_string($connection, $_POST['contactName']);
+            $phoneNumber = mysqli_real_escape_string($connection, $_POST['phoneNumber']);
+            $emailAddress = mysqli_real_escape_string($connection, $_POST['emailAddress']);
+            $notes = mysqli_real_escape_string($connection, $_POST['notes']);
 
         //Insert new company into the database and return success=1
 
