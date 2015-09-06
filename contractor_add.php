@@ -34,7 +34,8 @@ with * are required to be completed.</p>
         //Form variables for submission to database
         $inputs = array(
             $_POST['businessName'],
-            $_POST['street'], $_POST['suburb'],
+            $_POST['street'], 
+            $_POST['suburb'],
             $_POST['state'],
             $_POST['postcode'],
             $_POST['contactName'],
@@ -44,6 +45,7 @@ with * are required to be completed.</p>
 
         for ($i = 0; $i < count($inputs); $i++) {
             $inputs[$i] = mysql_real_escape_string($inputs[$i]);
+            echo $inputs[$i];
         }
         //Insert new company into the database and return success=1
 
