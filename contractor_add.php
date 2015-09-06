@@ -22,7 +22,7 @@ with * are required to be completed.</p>
         $password = "team5";
         $hostname = "localhost";
         $database = "ifb299db";
-        $table = "Contractors";
+        $table = "contractors";
 
         $connection = mysqli_connect($hostname, $username, $password, $database);
         if (!$connection){
