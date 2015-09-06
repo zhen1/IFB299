@@ -28,8 +28,6 @@ with * are required to be completed.</p>
         if (!$connection){
         	die("Connection failed: " . mysqli_connect_error());
         }
-        //$selecttable = mysql_select_db($database, $dbhandle);
-
 
         //Form variables for submission to database
             $businessName = mysqli_real_escape_string($connection, $_POST['businessName']);
@@ -46,14 +44,8 @@ with * are required to be completed.</p>
 
         $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$businessName', '$street', '$suburb', '$state', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')";
         
-        if (mysqli_query($connection, $query)) {
-        echo "success!";
-        } else {
-        echo "fail: " . $query . "<br>" . mysqli_error($connection);
-        }
-        echo $query . "<br>" . mysqli_error($connection);
+		mysqli_query($connection, $query);        
         mysqli_close($connection);
-        //header("Location:contractor_add.php?success=1");
     }
     
     //error and success messages for add operation. Error message currently not used as form fields are checked by html value.

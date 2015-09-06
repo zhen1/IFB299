@@ -18,7 +18,7 @@
         $password = "team5";
         $hostname = "localhost";
         $database = "ifb299db";
-        $table = "Contractors";
+        $table = "contractors";
 
         $dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
         $selecttable = mysql_select_db($database, $dbhandle);
