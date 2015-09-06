@@ -48,7 +48,14 @@ with * are required to be completed.</p>
         //Insert new company into the database and return success=1
 
         $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')";
+        
+        if (mysqli_query($connection, $query)) {
+        echo "success!";
+        } else {
+        echo "fail: " . $query . "<br>" . mysqli_error($connection);
+        }
         mysqli_query($connection, $query);
+        
         mysqli_close($connection);
         //header("Location:contractor_add.php?success=1");
     }
