@@ -1,7 +1,7 @@
 <?php
 # Fill our vars and run on cli
 # $ php -f db-connect-test.php
-$dbname = 'IFB299';
+$dbname = 'IFB299db';
 $username = 'root';
 $password = 'team5';
 $servername = 'localhost';
