@@ -32,19 +32,19 @@ with * are required to be completed.</p>
 
 
         //Form variables for submission to database
-            $businessName = mysql_real_escape_string($_POST['businessName']);
-            $street = mysql_real_escape_string($_POST['street']); 
-            $suburb = mysql_real_escape_string($_POST['suburb']);
-            $state = mysql_real_escape_string($_POST['state']);
-            $postcode = mysql_real_escape_string($_POST['postcode']);
-            $contactName = mysql_real_escape_string($_POST['contactName']);
-            $phoneNumber = mysql_real_escape_string($_POST['phoneNumber']);
-            $emailAddress = mysql_real_escape_string($_POST['emailAddress']);
-            $notes = mysql_real_escape_string($_POST['notes']);
+            $businessName = mysqli_real_escape_string($_POST['businessName']);
+            $street = mysqli_real_escape_string($_POST['street']); 
+            $suburb = mysqli_real_escape_string($_POST['suburb']);
+            $state = mysqli_real_escape_string($_POST['state']);
+            $postcode = mysqli_real_escape_string($_POST['postcode']);
+            $contactName = mysqli_real_escape_string($_POST['contactName']);
+            $phoneNumber = mysqli_real_escape_string($_POST['phoneNumber']);
+            $emailAddress = mysqli_real_escape_string($_POST['emailAddress']);
+            $notes = mysqili_real_escape_string($_POST['notes']);
 
         //Insert new company into the database and return success=1
 
-        $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('". $businessName . "', '$street', '$suburb', '$state', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')";
+        $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$businessName', '$street', '$suburb', '$state', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')";
         
         if (mysqli_query($connection, $query)) {
         echo "success!";
