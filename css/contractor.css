@@ -27,3 +27,7 @@ table {
 	font-weight: bold;
 	color: #008000;
 }
+.searchHeadings {
+	font-weight: bold;
+	font-style: italic;
+}

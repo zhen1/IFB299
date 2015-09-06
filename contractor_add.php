@@ -15,11 +15,13 @@
 
 <em class="successful">
 <?php
-$success=$_GET['success'];
+if(isset($_GET["success"])){
+	$success=$_GET['success'];
 	if ($success == "1"){
-		echo ("Contractor Added Successfully!");			
+		echo ("Contractor Added Successfully!");
 	}
-
+}
+	
 ?>
 </em>
 	<form action="scriptAddContractor.php" method="post">

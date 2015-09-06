@@ -27,7 +27,6 @@
 		</tr>
 	</table>
 </form>
-
 <p><a href="contractor_home.php">Contractor Management System Home</a></p>
 
 </body>
