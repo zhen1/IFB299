@@ -21,7 +21,7 @@ with * are required to be completed.</p>
         $username = "root";
         $password = "team5";
         $hostname = "localhost";
-        $database = "IFB299db";
+        $database = "ifb299db";
         $table = "Contractors";
 
         $connection = mysqli_connect($hostname, $username, $password, $database);
