@@ -54,8 +54,7 @@ with * are required to be completed.</p>
         } else {
         echo "fail: " . $query . "<br>" . mysqli_error($connection);
         }
-        mysqli_query($connection, $query);
-        
+        echo $query . "<br>" . mysqli_error($connection);
         mysqli_close($connection);
         //header("Location:contractor_add.php?success=1");
     }
