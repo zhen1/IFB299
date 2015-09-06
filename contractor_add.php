@@ -32,24 +32,19 @@ with * are required to be completed.</p>
 
 
         //Form variables for submission to database
-        $inputs = array(
-            $_POST['businessName'],
-            $_POST['street'], 
-            $_POST['suburb'],
-            $_POST['state'],
-            $_POST['postcode'],
-            $_POST['contactName'],
-            $_POST['phoneNumber'],
-            $_POST['emailAddress'],
-            $_POST['notes']);
+            $businessName = mysql_real_escape_string($_POST['businessName']);
+            $street = mysql_real_escape_string($_POST['street']); 
+            $suburb = mysql_real_escape_string($_POST['suburb']);
+            $state = mysql_real_escape_string($_POST['state']);
+            $postcode = mysql_real_escape_string($_POST['postcode']);
+            $contactName = mysql_real_escape_string($_POST['contactName']);
+            $phoneNumber = mysql_real_escape_string($_POST['phoneNumber']);
+            $emailAddress = mysql_real_escape_string($_POST['emailAddress']);
+            $notes = mysql_real_escape_string($_POST['notes']);
 
-        for ($i = 0; $i < count($inputs); $i++) {
-            $inputs[$i] = mysql_real_escape_string($inputs[$i]);
-            echo $inputs[$i];
-        }
         //Insert new company into the database and return success=1
 
-        $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$inputs[0]', '$inputs[1]', '$inputs[2]', '$inputs[3]', '$inputs[4]', '$inputs[5]', '$inputs[6]', '$inputs[7]', '$inputs[8]')";
+        $query = "INSERT INTO $table (businessName, street, suburb, state, postcode, contactName, phoneNumber, emailAddress, notes) VALUES ('$businessName', '$street', '$suburb', '$state', '$postcode', '$contactName', '$phoneNumber', '$emailAddress', '$notes')";
         
         if (mysqli_query($connection, $query)) {
         echo "success!";
