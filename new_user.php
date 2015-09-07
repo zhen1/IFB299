@@ -20,7 +20,7 @@
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$address = $_POST['address'];
-		
+
 			$query = mysql_query("SELECT * FROM $table WHERE Username='$user'");
 			if(mysql_num_rows($query) > 0)
 			{
@@ -28,7 +28,7 @@
 			}
 			else
 			{
-				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address')"); 
+				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, Approved) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address', '1')"); 
 				echo("User created successfully");
 			}
 		}
