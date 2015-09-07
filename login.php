@@ -14,21 +14,19 @@
         $myusername = stripslashes($myusername);
         $mypassword = stripslashes($mypassword);
 
-        $query = "SELECT * FROM $table WHERE username='$myusername' and password='$mypassword'";
-        $result = mysql_query($query);
+
+        $query = "SELECT password FROM $table WHERE username='$myusername'";
+        $hashedpassword = mysql_query($query);
         $count = mysql_num_rows($result);
 
         mysql_close();
 
-        if($count==1)
-        {
-			$seconds = 86400 + time();
-			setcookie(loggedin, date("F jS - g:i a"), $seconds);
-			header("location:login_success.php");
+        if ($count ==1 and password_verify( $mypassword, $hashedpassword)) {
+          $seconds = 86400 + time();
+          setcookie(loggedin, date("F jS - g:i a"), $seconds);
+          header("location:login_success.php");
+        } else {
+            echo 'Incorrect username or password';
         }
-		else
-		{
-			echo 'Incorrect username or password';
-		}
 
 ?>
