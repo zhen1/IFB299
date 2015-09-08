@@ -2,10 +2,8 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>About Us</title>
-        
+    <title>Migrant Signup</title>
         <link rel="stylesheet" href="css/style.css">
-
   </head>
 
   <body>
@@ -23,7 +21,17 @@
       <li><a href="members.php">Members</a></li>
     </ul>
   </div>
-  <p>About Us Page</p>
+
+    <form action="login.php" method="POST">
+		<p>Username:</p><input type="text" name="user" />
+		<p>Password:</p><input type="password" name="pass" />
+		<br />
+		<input type="submit" value="Login" />
+	</form>
+
+	<form action="volunteer_signup.php">
+		<input type="submit" value="Signup">
+	</form>
 </div>
 
     
