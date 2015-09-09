@@ -1,6 +1,5 @@
 <?php require("templates/header.php"); ?>
 
-<title>About Us</title>
-
+<title>Home</title>
 
 <?php require("templates/footer.php"); ?>
