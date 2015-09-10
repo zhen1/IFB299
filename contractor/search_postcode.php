@@ -1,19 +1,13 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<?php require("../templates/header.php"); ?>
 
-<head>
-<meta charset="utf-8" />
 <title>Contractor Management System - Search</title>
-<link href="css/contractor.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
+<link rel="stylesheet" href="../css/style.css">
 
 <h1>Contractor Management System</h1>
 <h2>Search by Postcode</h2>
 <hr><hr>
 <p class="information">Enter a postcode to view all contractors located in that area.</p>
-<form action="contractor_search_results.php?option=2" method="post">
+<form action="search_results.php?option=2" method="post">
 	<table>
 		<tr>
 			<td>Enter Postcode:</td>
@@ -27,8 +21,6 @@
 	</table>
 </form>
 <hr>
-<p><a href="contractor_home.php">Return to Main Menu</a></p>
+<p><a href="../contractor.php">Return to Main Menu</a></p>
 
-</body>
-
-</html>
+<?php require("../templates/footer.php"); ?>

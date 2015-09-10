@@ -28,12 +28,12 @@
 			}
 			else
 			{
-				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, Approved) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address', '1')"); 
-				echo("User created successfully");
+				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address', 'Migrant', '1')"); 
+				header("Location:home.php");
 			}
 		}
-		
 		mysql_close();
+		
 ?> 
 
 <?php require("templates/header.php"); ?>

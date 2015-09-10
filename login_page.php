@@ -26,7 +26,7 @@
 					{
 						$_SESSION['logged_in'] = true;
 						$_SESSION['Username'] = $user;
-						$_SESSION['UserLevel'] = ($result, "UserLevel");
+						$_SESSION['user_type'] = $result["UserLevel"];
 						header("Location:home.php");
 					}
 					else

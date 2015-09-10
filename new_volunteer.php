@@ -30,7 +30,7 @@
 				echo("User created successfully");
 			}
 		}
-		
+		header("Location:home.php");
 		mysql_close();
 ?>
 
