@@ -1,4 +1,4 @@
-<?php require("../templates/header.php"); ?>
+<?php require("../templates/header_sub.php"); ?>
 
 <title>Contractor Management System - Search</title>
 <link rel="stylesheet" href="../css/style.css">

@@ -3,8 +3,8 @@
 	{
 	$_SESSION['index_visited'] = true;
 	$_SESSION['logged_in'] = false;
-	$_SESSION['username'] = "";
-	$_SESSION['user_type'] = "Admin";
+	$_SESSION['Username'] = " ";
+	$_SESSION['user_type'] = " ";
 	}
 	
 	// Test to see if pages change dempending on user_type (remove when no longer needed)

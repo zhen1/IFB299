@@ -1,4 +1,4 @@
-<?php require("../templates/header.php"); ?>
+<?php require("../templates/header_sub.php"); ?>
 
 <title>Contractor Management System - Add New Contractor</title>
 <link rel="stylesheet" href="../css/style.css">
