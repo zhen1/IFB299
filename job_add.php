@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8" />
-<title>Contractor Management System - Add New Contractor</title>
+<title>Work Orders - Add New Work Order</title>
 <link href="css/contractor.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -36,18 +36,23 @@ with * are required to be completed.</p>
             $jobStatus = mysqli_real_escape_string($connection, $_POST['jobStatus']);
             $progressNotes = mysqli_real_escape_string($connection, $_POST['progressNotes']);
             
-        //Insert new company into the database and return success=1
 
         $query = "INSERT INTO $table (customerID, jobDescription, jobType, jobStatus, progressNotes) VALUES ('$customerID', '$jobDescription', '$jobType', '$jobStatus', '$progressNotes')";
+        $checkCustomer = "SELECT * FROM logins WHERE ID='$customerID' AND UserLevel='Migrant'";
+        $checkCustomerResult = mysqli_query($connection, $checkCustomer);
+        $rows = mysqli_num_rows($checkCustomerResult);
         
+        if ($rows == 1){
 		mysqli_query($connection, $query);        
         mysqli_close($connection);
         header("Location:job_add.php?success=1");
+        }
+        else{
+        header("Location:job_add.php?success=0");
+        }
 
     }
     
-    //error and success messages for add operation. Error message currently not used as form fields are checked by html value.
-    //may change this if we need to implement further validation checks on the data.
     ?><em class="successful"><?php
         if (isset($_GET["success"])) {
             $success = $_GET['success'];
@@ -59,7 +64,7 @@ with * are required to be completed.</p>
         if (isset($_GET["success"])) {
             $success = $_GET['success'];
             if ($success == "0") {
-                echo ("Error! Unsuccessful, Please try again!");
+                echo ("Error! Please check that the customer ID provided is a valid migrant account and try again!");
             }
         }
         ?></em>
@@ -77,7 +82,8 @@ with * are required to be completed.</p>
 		</tr>
 		<tr>
 			<td>Job Type:</td>
-			<td><select name="jobType">
+			<td><select name="jobType" required>
+			<option value="" selected disabled></option>
 			<option>Building</option>
 			<option>Plumbing</option>
 			<option>Electrical</option>
