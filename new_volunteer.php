@@ -28,9 +28,9 @@
 			{
 				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$pass', '$email', 'Volunteer', '0')"); 
 				echo("User created successfully");
+				header("Location:home.php");
 			}
 		}
-		header("Location:home.php");
 		mysql_close();
 ?>
 
@@ -38,7 +38,7 @@
 <title>Signup</title>
   
 	<h1>Signup</h1>
-	<form action="volunteer_signup.php" method="POST">
+	<form action="new_volunteer.php" method="POST">
 		<p>First Name:</p><input type="text" name="fname" />
 		<p>Last Name:</p><input type="text" name="lname" />
 		<p>Username:</p><input type="text" name="user" />

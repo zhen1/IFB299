@@ -14,7 +14,16 @@
 	$phone = $_POST['phone'];
 	$address = $_POST['address'];
 	
-	$update = "UPDATE $table SET FirstName='$fname', LastName='$lname', Password='$pass', Email='$email', PhoneNumber='$phone', Address='$address'WHERE Username='$account'";
+	$update = "	UPDATE $table 
+				SET 
+				FirstName='$fname', 
+				LastName='$lname', 
+				Password='$pass', 
+				Email='$email', 
+				PhoneNumber='$phone', 
+				Address='$address'
+				WHERE 
+				Username='$account'";
 	mysql_query($update);
 	mysql_close();
 	header("Location:../account.php");

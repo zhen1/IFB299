@@ -20,7 +20,7 @@ $account = $_SESSION['Username'];
 	$email = mysql_result($result, 0, "Email");
 	$phone = mysql_result($result, 0, "PhoneNumber");
 	$address = mysql_result($result, 0, "Address");
-	$id = mysql_result($result, 0, "ID")
+	$id = mysql_result($result, 0, "ID");
 
 ?>
 	<h1>Edit Account</h1>
