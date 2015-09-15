@@ -8,7 +8,7 @@
 <hr><hr>
 <p class="information">Please enter the contractor number for the record that requires updating</p>
 
-<form action="contractor_modify.php" method="post">
+<form action="modify.php" method="post">
 	<input name="contractorID" type="text"><input name="viewRecord" type="submit" value="View Record"></form>
 <hr>
 <p><a href="../contractor.php">Return to Main Menu</a></p>

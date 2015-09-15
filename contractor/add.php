@@ -40,7 +40,7 @@ with * are required to be completed.</p>
         
 		mysqli_query($connection, $query);        
         mysqli_close($connection);
-        header("Location:contractor_add.php?success=1");
+        header("Location:add.php?success=1");
 
     }
     
