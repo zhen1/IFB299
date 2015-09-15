@@ -78,7 +78,16 @@ with * are required to be completed.</p>
 		</tr>
 		<tr>
 			<td>State:</td>
-			<td><input maxlength="3" name="state" required="" type="text" />*</td>
+			<td><select name="state">
+			<option>ACT</option>
+			<option>NSW</option>
+			<option>NT</option>
+			<option>QLD</option>
+			<option>SA</option>
+			<option>TAS</option>
+			<option>VIC</option>
+			<option>WA</option>
+			</select>*</td>
 		</tr>
 		<tr>
 			<td>Postcode:</td>
@@ -100,7 +109,7 @@ with * are required to be completed.</p>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td><textarea name="notes"></textarea></td>
+			<td><textarea name="notes" cols="20" rows="5"></textarea></td>
 		</tr>
 		<tr>
 			<td></td>

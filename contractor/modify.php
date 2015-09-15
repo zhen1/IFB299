@@ -77,7 +77,58 @@
 		</tr>
 		<tr>
 			<td>State:</td>
-			<td><input maxlength="3" name="state" required="" type="text" value="<?php echo $state ?>" />*</td>
+			<td><select name="state" style="height: 22px" >
+			<?php
+			if ($state == "ACT"){
+			echo '<option selected="">ACT</option>';
+			}else{
+			echo '<option>ACT</option>';
+			}
+			
+			if ($state == "NSW"){
+			echo '<option selected="">NSW</option>';
+			}else{
+			echo '<option>NSW</option>';
+			}
+			
+			if ($state == "NT"){
+			echo '<option selected="">NT</option>';
+			}else{
+			echo '<option>NT</option>';
+			}
+			
+			if ($state == "QLD"){
+			echo '<option selected="">QLD</option>';
+			}else{
+			echo '<option>QLD</option>';
+			}
+
+			if ($state == "SA"){
+			echo '<option selected="">SA</option>';
+			}else{
+			echo '<option>SA</option>';
+			}
+
+			if ($state == "TAS"){
+			echo '<option selected="">TAS</option>';
+			}else{
+			echo '<option>TAS</option>';
+			}
+
+			if ($state == "VIC"){
+			echo '<option selected="">VIC</option>';
+			}else{
+			echo '<option>VIC</option>';
+			}
+
+			if ($state == "WA"){
+			echo '<option selected="">WA</option>';
+			}else{
+			echo '<option>WA</option>';
+			}
+
+			?>
+			</select>*</td>
 		</tr>
 		<tr>
 			<td>Postcode:</td>
