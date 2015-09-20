@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>About Us</title>
-        
-        <link rel="stylesheet" href="css/style.css">
+<?php require("templates/header.php"); ?>
 
-  </head>
+<title>About Us</title>
 
-  <body>
 
-<div id="main">
-  <div id="banner">
-
-  </div>
-  <div id="menu">
-    <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="aboutus.php">About Us</a></li>
-      <li><a href="contactus.php">Contact Us</a></li>
-      <li><a href="suppliers.php">Suppliers</a></li>
-      <li><a href="members.php">Members</a></li>
-    </ul>
-  </div>
-  <p>About Us Page</p>
-</div>
-
-    
-    
-    
-    
-    
-  </body>
-</html>
+<?php require("templates/footer.php"); ?>
