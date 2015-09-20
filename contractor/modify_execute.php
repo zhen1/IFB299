@@ -31,9 +31,9 @@
 		echo $query;
        mysql_query($query);
        mysql_close();
-       header("Location:contractor_modify.php?success=1");
+       header("Location:modify.php?success=1");
     }else{
-    	header("Location:contractor_modify.php?success=0");
+    	header("Location:modify.php?success=0");
     }
 ?>
 
