@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
+<?php require("../templates/header_sub.php"); ?>
 
-<head>
-<meta charset="utf-8" />
 <title>Contractor Management System - Add New Contractor</title>
-<link href="css/contractor.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
+<link rel="stylesheet" href="../css/style.css">
 
 <h1>Contractor Management System</h1>
 <h2>Add New Contractor</h2>
@@ -46,7 +40,7 @@ with * are required to be completed.</p>
         
 		mysqli_query($connection, $query);        
         mysqli_close($connection);
-        header("Location:contractor_add.php?success=1");
+        header("Location:add.php?success=1");
 
     }
     
@@ -67,7 +61,7 @@ with * are required to be completed.</p>
             }
         }
         ?></em>
-<form action="contractor_add.php" method="post">
+<form action="add.php" method="post">
 	<table>
 		<tr>
 			<td>Business Name:</td>
@@ -124,8 +118,6 @@ with * are required to be completed.</p>
 	</table>
 </form>
 <hr>
-<p><a href="contractor_home.php">Return to Main Menu</a></p>
+<p><a href="../contractor.php">Return to Main Menu</a></p>
 
-</body>
-
-</html>
+<?php require("../templates/footer.php"); ?>
