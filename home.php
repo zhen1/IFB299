@@ -5,36 +5,18 @@
 <?php if($_SESSION['user_type'] == 'Admin'){ ?>
 
 	<h1>Welcome Admin</h1>
-	<div>
-	<ul>
-		<li><a href="volunteers.php">Volunteers</a></li>
-		<li><a href="contractor.php">Contractor</a></li>
-	</ul>
-	</div>
+
 <?php } else if($_SESSION['user_type'] == 'Manager') { ?>
 
 	<h1>Welcome Manager</h1>
-	<div>
-		<ul>
-			<li><a href="volunteers.php">Volunteers</a></li>
-			<li><a href="contractor.php">Contractor</a></li>
-		</ul>
-	</div>
+	
 <?php } else if($_SESSION['user_type'] == 'Volunteer') { ?>
 
 	<h1>Welcome Volunteer</h1>
-		<div>
-		<ul>
-			<li><a href="contractor.php">Contractor</a></li>
-		</ul>
-	</div>
+	
 <?php } else if($_SESSION['user_type'] == 'Migrant') { ?>
 
 	<h1>Welcome Migrant</h1>
-	<div>
-		<ul>
-		</ul>
-	</div>
 	
 <?php } else { ?>
 
