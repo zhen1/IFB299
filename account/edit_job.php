@@ -38,7 +38,7 @@
 		<br />
 		<input type="submit" value="Save" />
 	</form>
-	<form action="../account.php">
+	<form action="job.php">
 		<input type="submit" value="Cancel">
 	</form>
 
