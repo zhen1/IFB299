@@ -1,3 +1,8 @@
+<!--
+This file searches the job database using one of two available queries
+it can currently search by the migrant user client number or it can search by the job number
+-->
+
 <?php 
 require("../db_connect.php");
 require("../templates/header_sub.php"); 
@@ -12,6 +17,8 @@ $account = $_SESSION['Username'];
 	$dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
 	$selecttable = mysql_select_db($database, $dbhandle);
 	$table = "jobs";
+	
+	//This is the query I have designed being used for client number and job number searches.
 	if  (isset($_POST['id_search'])) {
 		$search = $_POST['id_search'];
 		$query = "SELECT jobs.jobNumber, jobs.customerID, logins.FirstName AS clientFirstName, logins.LastName AS clientLastName, contractors.contractorID, contractors.businessName AS contractorAssigned, contractors.phoneNumber AS contractorContactNumber, jobs.jobType, jobs.jobDescription, jobs.jobStatus, jobs.progressNotes, jobs.lastUpdateDateTime AS lastUpdate FROM jobs INNER JOIN logins ON jobs.customerID=logins.ID LEFT JOIN contractors ON jobs.contractorID=contractors.contractorID WHERE jobNumber = '$search'";
