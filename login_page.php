@@ -44,13 +44,23 @@
 		}
 	?>
 	<title>Login</title>
-	
+	<h1>System Login</h1>
 	<section id="logincontent">
+		<p>Please enter your username and password to continue.</p>
 		<form action="" method="POST">
-			<input type="text" name="username" placeholder="Username" required> <br />
-			<input type="password" name="password" placeholder="Password" required> <br />
-			<input type="submit" name="submit" value="Login" />
+			<table>
+			<tr>
+			<td>Username: </td><td><input type="text" name="username" placeholder="Username" required></td>
+			</tr>
+			<tr>
+			<td>Password: </td><td><input type="password" name="password" placeholder="Password" required></td>
+			</tr>
+			<tr>
+			<td></td><td><input type="submit" name="submit" value="Login" /></td>
+			</tr>
+		</table>
 		</form>
+		<p><a href="signup.php">I don't have an account</a></p>
 	</section>
 	
 <?php require("templates/footer.php"); ?>
