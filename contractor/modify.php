@@ -1,3 +1,11 @@
+<!--
+This page is loaded from the contractor_update.php file. Displays a database record into a form
+so that information can be updated. Once the user input has been received it is posted to the contractor_modify_execute.php
+script for processing. A success number is returned to this file after processing and the appropriate success/error message
+is displayed.
+-->
+
+
 <?php require("../templates/header.php"); ?>
 
 <title>Untitled 1</title>

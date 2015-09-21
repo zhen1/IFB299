@@ -1,4 +1,9 @@
-﻿<?php require("../templates/header_sub.php"); ?>
+﻿<!--
+This page displays a form to the user requesting a postcode
+this input is then posted to search_results.php?option=2.
+-->
+
+<?php require("../templates/header_sub.php"); ?>
 
 <title>Contractor Management System - Search</title>
 <link rel="stylesheet" href="../css/style.css">

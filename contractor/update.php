@@ -1,3 +1,9 @@
+<!--
+Displays a form for the user to input the contractor number of a database record
+that requires updating. Posts the response to modify.php.
+-->
+
+
 <?php require("../templates/header_sub.php"); ?>
 
 <title>Contractor Management System - Update Existing Contractor</title>
