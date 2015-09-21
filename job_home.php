@@ -12,8 +12,8 @@
 <p><a href="job_add.php">Add New Work Order</a></p>
 <hr>
 <p class="information">Search for an existing work order</p>
-<p><a href="jobnumber_search.php">Search by Job Number</a></p>
-<p><a href="clientnumber_search.php">Search by Client Number</a></p>
+<p><a href="account/job.php">Search by Job Number</a></p>
+<p><a href="account/job_client_search.php">Search by Client Number</a></p>
 <p><a href="account/job_list.php">View all Jobs</a></p>
 
 <hr>

@@ -28,18 +28,49 @@
 ?>
 <h1>Edit Account</h1>
 	<form action="update_job.php" method="POST">
-		<p>Job Number: <?=$jobnumber?></p><input type="text" value="<?php echo $jobnumber ?>" name="jobnumber" />
-		<p>Contractor ID: <?=$contid?></p>
-		<p>Customer ID: <?=$custid?></p>
-		<p>Job Description:</p><input type="text" value="<?php echo $jobdesc ?>" name="jobdesc" />
-		<p>Job Type:</p><input type="text" value="<?php echo $jobtype ?>" name="jobtype" />
-		<p>Job Status:</p><input type="text" value="<?php echo $jobstat ?>" name="jobstat" />
-		<p>Notes:</p><input type="text" value="<?php echo $notes ?>" name="notes" />
-		<br />
-		<input type="submit" value="Save" />
+		<table>
+		<tr>
+		<td>Job Number: </td><td><?=$jobnumber?></td>
+		</tr>
+		<tr>
+		<td>Contractor ID:</td><td><?=$contid?></td>
+		</tr>
+		<tr>
+		<td>Customer ID:<td><?=$custid?></td>
+		</tr>
+		<tr>
+		<td>Job Description:</td><td><input type="text" value="<?php echo $jobdesc ?>" name="jobdesc" /></td>
+		</tr>
+			<tr>
+		<td>Job Type:</td>
+		<td><select name="jobtype">
+		<option <?php if ($jobtype == "Building") echo 'selected'; ?>>Building</option>
+		<option <?php if ($jobtype == "Plumbing") echo 'selected'; ?>>Plumbing</option>
+		<option <?php if ($jobtype == "Electrical") echo 'selected'; ?>>Electrical</option>
+		<option <?php if ($jobtype == "Landscaping") echo 'selected'; ?>>Landscaping</option>
+		<option <?php if ($jobtype == "Other") echo 'selected'; ?>>Other</option>
+		</select></td>
+		</tr>
+
+		<tr>
+		<td>Job Status:</td>
+		<td><select name="jobstat">
+		<option <?php if ($jobstat == "Open") echo 'selected'; ?> value="Open">Open</option>
+		<option <?php if ($jobstat == "In Progress") echo 'selected'; ?> value="In Progress">In Progress</option>
+		<option <?php if ($jobstat == "Closed") echo 'selected'; ?> value="Closed">Closed</option>
+
+		</select></td>
+		</tr>
+
+		<tr>
+		<td>Notes:</td><td><textarea name="notes"><?php echo $notes ?></textarea>
+		</tr>
+		<tr>
+		<td><input type="hidden" value="<?php echo $jobnumber ?>" name="jobnumber" /></td>
+		<td><input type="submit" value="Save" /></td>
+		</tr>
+		</table>
 	</form>
-	<form action="../account.php">
-		<input type="submit" value="Cancel">
-	</form>
+	<p><a href="../account.php">Cancel Changes</a></p>
 
 <?php require("../templates/footer.php"); ?>
