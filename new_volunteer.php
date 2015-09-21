@@ -37,15 +37,30 @@
 <?php require("templates/header.php"); ?>
 <title>Signup</title>
   
-	<h1>Signup</h1>
+	<h1>Volunteer Signup</h1>
+<p>Please complete the form to create a new volunteer account. Please note that 
+a manager must approve this request before you are able to login to the system.</p>
 	<form action="new_volunteer.php" method="POST">
-		<p>First Name:</p><input type="text" name="fname" />
-		<p>Last Name:</p><input type="text" name="lname" />
-		<p>Username:</p><input type="text" name="user" />
-		<p>Password:</p><input type="password" name="pass" />
-		<p>Email:</p><input type="text" name="email" />
-		<br />
-		<input type="submit" value="Signup" />
+	<table>
+		<tr>
+		<td>First Name:</td><td><input type="text" name="fname" /></td>
+		</tr>
+		<tr>
+		<td>Last Name:</td><td><input type="text" name="lname" /></td>
+		</tr>
+		<tr>
+		<td>Username:</td><td><input type="text" name="user" /></td>
+		</tr>
+		<tr>
+		<td>Password:</td><td><input type="password" name="pass" /></td>
+		</tr>
+		<tr>
+		<td>Email:</td><td><input type="text" name="email" /></td>
+		</tr>
+		<tr>
+		<td></td><td><input type="submit" value="Submit" name="Submit" /></td>
+		</tr>
+	</table>
 	</form>
 	
 	<?php require("templates/footer.php"); ?>

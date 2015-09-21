@@ -1,7 +1,6 @@
 <?php require("templates/header.php"); ?>
 
 <title>Contractor Management System - Main Menu</title>
-<link rel="stylesheet" href="../css/style.css">
 
 <h1>Contractor Management System</h1>		
 <hr>

@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
+<?php require("templates/header.php"); ?>
 
-<head>
-<meta charset="utf-8" />
 <title>Work Orders - Add New Work Order</title>
-<link href="css/contractor.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
 
 <h1>Work Orders</h1>
 <h2>Add New Work Order</h2>
@@ -113,6 +106,4 @@ with * are required to be completed.</p>
 <hr>
 <p><a href="job_home.php">Return to Main Menu</a></p>
 
-</body>
-
-</html>
+<?php require("templates/footer.php"); ?>
