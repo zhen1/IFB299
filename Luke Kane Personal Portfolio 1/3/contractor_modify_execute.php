@@ -4,7 +4,6 @@ page and runs an sql query to update the record into the database. Returns eithe
 or 0 for fail to the contractor_modify.php file.
 -->
 
-
 <?php
 	$contractorID = $_GET["record"];
     if (isset($_POST['businessName'])) {
@@ -38,9 +37,9 @@ or 0 for fail to the contractor_modify.php file.
 		echo $query;
        mysql_query($query);
        mysql_close();
-       header("Location:modify.php?success=1");
+       header("Location:contractor_modify.php?success=1");
     }else{
-    	header("Location:modify.php?success=0");
+    	header("Location:contractor_modify.php?success=0");
     }
 ?>
 

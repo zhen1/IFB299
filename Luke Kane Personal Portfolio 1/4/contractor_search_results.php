@@ -4,10 +4,16 @@ database by business name. Any other options will default to search the contract
 by postcode. The results are displayed on this page.
 -->
 
-<?php require("../templates/header_sub.php"); ?>
+<!DOCTYPE html>
+<html>
 
+<head>
+<meta charset="utf-8" />
 <title>Contractor Management System - Search</title>
-<link rel="stylesheet" href="../css/style.css">
+<link href="css/contractor.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
 
 <h1>Contractor Management System</h1>
 <h2>Search Results</h2>
@@ -70,6 +76,8 @@ by postcode. The results are displayed on this page.
         mysql_close();
         ?></p>
         <hr />
-<p><a href="../contractor.php">Return to Main Menu</a></p>
+<p><a href="contractor_home.php">Return to Main Menu</a></p>
 
-<?php require("../templates/footer.php"); ?>
+</body>
+
+</html>

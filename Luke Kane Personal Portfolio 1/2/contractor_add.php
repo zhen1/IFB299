@@ -1,13 +1,18 @@
+<!DOCTYPE html>
+
 <!-- 
 This page displays a form to the user to add new records to the contractors database table. It posts back to itself
 and displays a success message. 
 -->
 
-
-<?php require("../templates/header_sub.php"); ?>
-
+<html>
+<head>
+<meta charset="utf-8" />
 <title>Contractor Management System - Add New Contractor</title>
-<link rel="stylesheet" href="../css/style.css">
+<link href="css/contractor.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
 
 <h1>Contractor Management System</h1>
 <h2>Add New Contractor</h2>
@@ -46,7 +51,7 @@ with * are required to be completed.</p>
         
 		mysqli_query($connection, $query);        
         mysqli_close($connection);
-        header("Location:add.php?success=1");
+        header("Location:contractor_add.php?success=1");
 
     }
     
@@ -67,7 +72,7 @@ with * are required to be completed.</p>
             }
         }
         ?></em>
-<form action="add.php" method="post">
+<form action="contractor_add.php" method="post">
 	<table>
 		<tr>
 			<td>Business Name:</td>
@@ -124,6 +129,8 @@ with * are required to be completed.</p>
 	</table>
 </form>
 <hr>
-<p><a href="../contractor.php">Return to Main Menu</a></p>
+<p><a href="contractor_home.php">Return to Main Menu</a></p>
 
-<?php require("../templates/footer.php"); ?>
+</body>
+
+</html>

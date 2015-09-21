@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!--
 This page is loaded from the contractor_update.php file. Displays a database record into a form
 so that information can be updated. Once the user input has been received it is posted to the contractor_modify_execute.php
@@ -5,12 +7,13 @@ script for processing. A success number is returned to this file after processin
 is displayed.
 -->
 
+<html>
 
-<?php require("../templates/header.php"); ?>
-
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>Untitled 1</title>
-<link rel="stylesheet" href="../css/style.css">
-
+<link href="css/contractor.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 	$rows = 0;
 	if (isset($_POST['contractorID'])) {
@@ -47,6 +50,8 @@ is displayed.
 
 ?>
 
+<body>
+
 <h1>Contractor Management System</h1>
 <h2>Update Existing Contractor</h2>
 <hr><hr>
@@ -67,7 +72,7 @@ is displayed.
 			}
 	} ?></em>
 
-<form action="modify_execute.php?record=<?php echo $contractorID?>" method="post">
+<form action="contractor_modify_execute.php?record=<?php echo $contractorID?>" method="post">
 	<table <?php if($rows == 0) echo 'hidden="hidden"'?> >
 	<?php if($rows == 0 && !isset($_GET["success"])) echo '<em class="unsuccessful">Error! no records found, please check the record number and try again.</em>';?>
 		<tr>
@@ -167,6 +172,9 @@ is displayed.
 	</table>
 </form>
 <hr>
-<p><a href="../contractor.php">Return to Main Menu</a></p>
+<p><a href="contractor_home.php">Return to Main Menu</a></p>
 
-<?php require("../templates/footer.php"); ?>
+
+</body>
+
+</html>
