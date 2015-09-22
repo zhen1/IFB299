@@ -4,6 +4,7 @@
 
 <?php if($_SESSION['user_type'] == 'Admin'){ ?>
 
+
 	<h1>Welcome Admin</h1>
 
 <?php } else if($_SESSION['user_type'] == 'Manager') { ?>
@@ -13,6 +14,8 @@
 <?php } else if($_SESSION['user_type'] == 'Volunteer') { ?>
 
 	<h1>Welcome Volunteer</h1>
+	<p><a href="job_home.php">Work Orders</a></p>
+<p><a href="contractor.php">Contractors</a></p>
 	
 <?php } else if($_SESSION['user_type'] == 'Migrant') { ?>
 
@@ -21,6 +24,7 @@
 <?php } else { ?>
 
 	<h1>Welcome</h1>
+	<p>Welcome to the Migrant Help Desk. Please <a href="login_page.php">login</a> to view our services or <a href="signup.php">create an account.</a></p>
 
 <?php } ?>
 

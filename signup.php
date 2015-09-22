@@ -40,21 +40,38 @@
 <title>Signup</title>
 
 
-	<h1>Migrant Signup</h1>
+	<h1>New Migrant User Signup</h1>
+	<p>Please complete this form to signup for a new account.</p>
+	
 	<form action="signup.php" method="POST">
-		<p>First Name:</p><input type="text" name="fname" />
-		<p>Last Name:</p><input type="text" name="lname" />
-		<p>Username:</p><input type="text" name="user" />
-		<p>Password:</p><input type="password" name="pass" />
-		<p>Email:</p><input type="text" name="email" />
-		<p>Phone Number:</p><input type="text" name="phone" />
-		<p>Address:</p><input type="text" name="address" />
-		<br />
-		<input type="submit" value="Signup" />
+		<table>
+		<tr>
+		<td>First Name:</td><td><input type="text" name="fname" /></td>
+		</tr>
+		<tr>		
+		<td>Last Name:</td><td><input type="text" name="lname" /></td>
+		</tr>
+		<tr>
+		<td>Username:</td><td><input type="text" name="user" /></td>
+		</tr>
+		<tr>
+		<td>Password:</td><td><input type="password" name="pass" /></td>
+		</tr>
+		<tr>
+		<td>Email:</td><td><input type="text" name="email" /></td>
+		</tr>
+		<tr>
+		<td>Phone Number:</td><td><input type="text" name="phone" /></td>
+		</tr>
+		<tr>
+		<td>Address:</td><td><input type="text" name="address" /></td>
+		</tr>
+		<tr>
+		
+		<td></td><td><input type="submit" value="Submit" name="Submit" /></td>
+	</tr>
+	</table>
 	</form>
-	<form action="new_volunteer.php">
-		<input type="submit" value="Volunteer Signup">
-	</form>
-	</div>
+	<p><a href="new_volunteer.php">Volunteer Signup</a></p>
 	
 <?php require("templates/footer.php"); ?>

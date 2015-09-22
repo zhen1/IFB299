@@ -1,28 +1,17 @@
-<!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Contact Us</title>    
-        <link rel="stylesheet" href="css/style.css">
+<?php require("templates/header.php"); ?>
 
-  </head>
+<title>About Us</title>
 
-  <body>
 
-	<div id="main">
-		<div id="banner">
 
-		</div>
-		<div id="menu">
-		<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="aboutus.php">About Us</a></li>
-			<li><a href="contactus.php">Contact Us</a></li>
-			<li><a href="signup.php">Signup</a></li>
-			<li><a href="members.php">Login</a></li>
-		</ul>
-		</div>
-	<p>Contact Us Page</p>
-	</div>
-  </body>
-</html>
+
+	<h1>Contact Us Page</h1>
+		<p>You can contact us by phone between the hours of 8am - 5pm Monday to 
+		Friday. If contacting us by email please allow up to 24 hours to 
+		respond.</p>
+		<p>Phone: (07)3333-9999</p>
+		<p>Email: <a href="mailto:helpdesk@migranthelpdesk.com.au">
+		helpdesk@migranthelpdesk.com.au</a></p>
+<img alt="customer service image" height="500" src="images/contact_us.jpg" width="500">
+		
+<?php require("templates/footer.php"); ?>
