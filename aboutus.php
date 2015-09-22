@@ -10,8 +10,4 @@
 
 
 
-<img alt="volunteers" height="329" src="images/association-152746_1280.png" width="435">
-
-
-
 <?php require("templates/footer.php"); ?>
