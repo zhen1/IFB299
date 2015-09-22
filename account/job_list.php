@@ -17,6 +17,7 @@
 	$row = mysql_num_rows($result);
 	$i = 0;
 	
+	echo "<h1>All Jobs - Search Result</h1>";
 	while ($i < $row)
 	{
 		$jobNumber = mysql_result($result, $i, "jobNumber"); 

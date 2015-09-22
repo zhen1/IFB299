@@ -11,10 +11,11 @@ $account = $_SESSION['Username'];
 	<div id="sub_menu">
       <ul>
 	  <form action="job_search.php" method="POST">
-			<p>Search Customer Number: </p><input type="text" name="client_search" required/>
+			<h1>Search By Customer Number</h1>
+			<p>Please enter a customer number.</p><input type="text" name="client_search" required/>
 			<input type="submit" value="Search" />
 	  </form>
-	  <li><a href="job_list.php">Full Job List</a></li>
+	  <li><a href="job_list.php">View All Jobs</a></li>
 	  </ul>
 	</div>
 
