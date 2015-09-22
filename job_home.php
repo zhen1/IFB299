@@ -4,7 +4,7 @@
 
 
 
-<h1>Work Orders</h1>		
+<h1>Work Orders (Jobs)</h1>		
 <h2>Main Menu</h2>
 <hr>
 <hr>
@@ -13,7 +13,7 @@
 <hr>
 <p class="information">Search for an existing work order</p>
 <p><a href="account/job.php">Search by Job Number</a></p>
-<p><a href="account/job_client_search.php">Search by Client Number</a></p>
+<p><a href="account/job_client_search.php">Search by Customer Number</a></p>
 <p><a href="account/job_list.php">View all Jobs</a></p>
 
 <hr>

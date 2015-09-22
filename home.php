@@ -6,20 +6,35 @@
 
 
 	<h1>Welcome Admin</h1>
-
+		<ul>
+			<li><a href="account/manager.php">View/Update Manager Accounts</a></li>
+			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
+			<li><a href="contractor.php">Contractor Management</a></li>
+			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
+		</ul>
 <?php } else if($_SESSION['user_type'] == 'Manager') { ?>
 
 	<h1>Welcome Manager</h1>
+		<ul>
+			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
+			<li><a href="contractor.php">Contractor Management</a></li>
+			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
+		</ul>
 	
 <?php } else if($_SESSION['user_type'] == 'Volunteer') { ?>
 
 	<h1>Welcome Volunteer</h1>
-	<p><a href="job_home.php">Work Orders</a></p>
-<p><a href="contractor.php">Contractors</a></p>
+		<ul>
+			<li><a href="contractor.php">Contractor Management</a></li>
+			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
+		</ul>
 	
 <?php } else if($_SESSION['user_type'] == 'Migrant') { ?>
 
 	<h1>Welcome Migrant</h1>
+		<ul>
+			<li><a href="account/job_status.php">Job Status</a></li>
+		</ul>
 	
 <?php } else { ?>
 

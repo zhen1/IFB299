@@ -6,7 +6,7 @@ require("../templates/header_sub.php");
 <link rel="stylesheet" href="../css/style.css">
 <title>Volunteers</title>
 
-<?php require("../templates/account_menu_sub.php") ?>
+<?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
 
 <?php
 	$search;
