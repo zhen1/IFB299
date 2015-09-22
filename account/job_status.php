@@ -7,7 +7,7 @@ $account = $_SESSION['Username'];
 <link rel="stylesheet" href="../css/style.css">
 <title><?=$account?>'s Account </title>
 
-<?php require("../templates/account_menu_sub.php") ?>
+<?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
 
 <?php
 	$con = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
@@ -25,14 +25,13 @@ $account = $_SESSION['Username'];
 	$job_result = mysql_query($job_query);
 	$i = 0;
 	$row = mysql_num_rows($job_result);
-	
+	echo "<h1>My Jobs</h1>";
 	while ($i < $row)
 	{
 		$jobnumber = mysql_result($job_result, $i, "jobNumber"); 
 		$jobdesc = mysql_result($job_result, $i, "jobDescription");
 		$jobstat = mysql_result($job_result, $i, "jobStatus");
 		$time = mysql_result($job_result, $i, "lastUpdateDateTime");
-		
 		echo 
 		"
 		<tr><td><b>Job Number: </b></td><td>$jobnumber</td></tr><br/>
