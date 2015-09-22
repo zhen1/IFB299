@@ -1,21 +1,24 @@
 <?php 
-	require("../db_connect.php");
-	require("../templates/header_sub.php"); 
-	$account = $_SESSION['Username'];
+require("../db_connect.php");
+require("../templates/header_sub.php"); 
+$account = $_SESSION['Username'];
 ?>
-	<link rel="stylesheet" href="../css/style.css">
-	<title><?=$account?>'s Account </title>
+
+<link rel="stylesheet" href="../css/style.css">
+<title><?=$account?>'s Account </title>
 
 <?php require("../templates/account_menu_sub.php") ?>
 
 <?php
 	$con = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
 	$database = mysql_select_db($database, $con);
-	$table = "jobs";
-	$query = "SELECT * FROM $table";
-	$job_result = mysql_query($query);
-	$row = mysql_num_rows($job_result);
+	$job_id = $_POST['jobid'];
+	
+	$job_table = "jobs";
+	$job_query = "SELECT * FROM $job_table WHERE jobnumber = '$job_id'";
+	$job_result = mysql_query($job_query);
 	$i = 0;
+	$row = mysql_num_rows($job_result);
 	
 	while ($i < $row)
 	{
@@ -38,16 +41,9 @@
 		<tr><td><b>Job Status: </b></td><td>$jobstat</td></tr><br/>
 		<tr><td><b>Time Stamp: </b></td><td>$time</td></tr><br/>
 		<tr><td><b>Notes: </b></td><td>$notes</td></tr><br/>
-		<form action='edit_job.php' method='POST'>
-			<input type='hidden' value='$jobnumber' name='jobid' />
-			<input type='submit' value='Edit Details' />
-		</form>
-		<br />
 		";
 		
 		$i++;
 	}
-	
 ?>
-
 <?php require("../templates/footer.php"); ?>
