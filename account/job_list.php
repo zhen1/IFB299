@@ -39,7 +39,7 @@
 		<tr><td><b>Time Stamp: </b></td><td>$time</td></tr><br/>
 		<tr><td><b>Notes: </b></td><td>$notes</td></tr><br/>
 		<form action='edit_job.php' method='POST'>
-			<input value='$jobnumber' name='jobid' />
+			<input type='hidden' value='$jobnumber' name='jobid' />
 			<input type='submit' value='Edit Details' />
 		</form>
 		<br />
