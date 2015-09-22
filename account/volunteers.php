@@ -19,7 +19,7 @@ require("../templates/header_sub.php");
 		$result = mysql_query($query);
 		$row = mysql_num_rows($result);
 		$i = 0;
-		
+		echo "<h1>User Accounts - Volunteers</h1>";
 		while ($i < $row)
 		{
 			$user = mysql_result($result, $i, "Username");
