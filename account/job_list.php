@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<title><?=$account?>'s Account </title>
 
-<?php require("../templates/account_menu_sub.php") ?>
+<?php //commented out due to moving the functions from accounts to home page require require("../templates/account_menu_sub.php") ?>
 
 <?php
 	$con = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
