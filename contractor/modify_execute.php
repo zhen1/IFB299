@@ -1,3 +1,10 @@
+<!--
+This script is called from contractor_modify.php. This takes the post from the previous
+page and runs an sql query to update the record into the database. Returns either 1 for success
+or 0 for fail to the contractor_modify.php file.
+-->
+
+
 <?php
 	$contractorID = $_GET["record"];
     if (isset($_POST['businessName'])) {

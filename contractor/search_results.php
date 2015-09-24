@@ -1,3 +1,9 @@
+<!--
+Is loaded from one of the contractor search pages. If ?option=1 the page will search the'
+database by business name. Any other options will default to search the contractor database
+by postcode. The results are displayed on this page.
+-->
+
 <?php require("../templates/header_sub.php"); ?>
 
 <title>Contractor Management System - Search</title>

@@ -7,7 +7,7 @@ $account = $_SESSION['Username'];
 <link rel="stylesheet" href="../css/style.css">
 <title>Managers</title>
 
-<?php require("../templates/account_menu_sub.php") ?>
+<?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
 
 
 <?php
@@ -21,7 +21,7 @@ $account = $_SESSION['Username'];
 		$result = mysql_query($query);
 		$row = mysql_num_rows($result);
 		$i = 0;
-		
+		echo "<h1>User Accounts - Manager</h1>";
 		while ($i < $row)
 		{
 			$user = mysql_result($result, $i, "Username");

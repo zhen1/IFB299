@@ -1,3 +1,8 @@
+<!--
+Displays a form to allow contractor database to be searched by business name
+gets the input and posts to search_results.php?option1
+-->
+
 <?php require("../templates/header_sub.php"); ?>
 
 <title>Contractor Management System - Search</title>

@@ -1,3 +1,9 @@
+<!-- 
+This page displays a form to the user to add new records to the contractors database table. It posts back to itself
+and displays a success message. 
+-->
+
+
 <?php require("../templates/header_sub.php"); ?>
 
 <title>Contractor Management System - Add New Contractor</title>

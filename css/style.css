@@ -1,17 +1,16 @@
-#main {
-  max-width: 600px;
-  height: 800px;
-  margin: 0 auto;
-  backGround-color: #AA3939;
+﻿#main {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 800px;
+	margin: 0 auto;
+	background-color: #99FF99;
 }
 
 #banner {
   height: 60px;
-  Max-width: 600px;
   /*
     Remove background-color when banner is in place
   */
-  
+
   Background-color: #303D74;
 }
 
@@ -45,4 +44,11 @@
 #menu a:hover {
   color: #F90;
   background-color: #FFF;
+}
+.searchResults {
+	background-color: #99FF99;
+}
+
+body {
+	background-color: #99FF99;
 }

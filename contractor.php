@@ -1,7 +1,10 @@
+<!--
+Main page for the contractor database functions. This page links to other pages to add, search or update contractor information.
+-->
+
 <?php require("templates/header.php"); ?>
 
 <title>Contractor Management System - Main Menu</title>
-<link rel="stylesheet" href="../css/style.css">
 
 <h1>Contractor Management System</h1>		
 <hr>

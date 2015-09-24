@@ -6,15 +6,16 @@ $account = $_SESSION['Username'];
 <link rel="stylesheet" href="../css/style.css">
 <title><?=$account?>'s Account </title>
 
-<?php require("../templates/account_menu_sub.php") ?>
+<?php //commented out due to moving the functions from accounts to home page ("../templates/account_menu_sub.php") ?>
 
 	<div id="sub_menu">
       <ul>
 	  <form action="job_search.php" method="POST">
-			<p>Search Job ID: </p><input type="text" name="id_search" />
+			<h1>Search by Job Number</h1>
+			<p>Please enter a job number.</p><input type="text" name="id_search" required/>
 			<input type="submit" value="Search" />
 	  </form>
-	  <li><a href="job_list.php">Full Job List</a></li>
+	  <li><a href="job_list.php">View All Jobs</a></li>
 	  </ul>
 	</div>
 

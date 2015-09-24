@@ -6,7 +6,7 @@ require("../templates/header_sub.php");
 <link rel="stylesheet" href="../css/style.css">
 <title>Volunteers</title>
 
-<?php require("../templates/account_menu_sub.php") ?>
+<?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
 
 <?php
 	$search;
@@ -19,7 +19,7 @@ require("../templates/header_sub.php");
 		$result = mysql_query($query);
 		$row = mysql_num_rows($result);
 		$i = 0;
-		
+		echo "<h1>User Accounts - Volunteers</h1>";
 		while ($i < $row)
 		{
 			$user = mysql_result($result, $i, "Username");
