@@ -34,6 +34,7 @@
 	<h1>Welcome Migrant</h1>
 		<ul>
 			<li><a href="account/job_status.php">Job Status</a></li>
+			<li><a href="account/job_history.php">Job History</a></li>
 		</ul>
 	
 <?php } else { ?>
