@@ -13,6 +13,8 @@
 <hr>
 <p class="information">Search for an existing work order</p>
 <p><a href="account/job.php">Search by Job Number</a></p>
+<p><a href="account/open_jobs.php">Open Jobs</a></p>
+<p><a href="account/in_progress_job.php">Jobs in Progress</a></p>
 <p><a href="account/job_client_search.php">Search by Customer Number</a></p>
 <p><a href="account/job_list.php">View all Jobs</a></p>
 

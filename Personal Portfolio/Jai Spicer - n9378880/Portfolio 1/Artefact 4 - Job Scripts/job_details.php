@@ -45,5 +45,6 @@ $account = $_SESSION['Username'];
 		
 		$i++;
 	}
+	mysql_close();
 ?>
 <?php require("../templates/footer.php"); ?>
