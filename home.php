@@ -41,6 +41,7 @@
 		<ul>
 			<li><a href="account/manager.php">View/Update Manager Accounts</a></li>
 			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
+			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
 			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
@@ -49,6 +50,7 @@
 	<h1>Welcome Manager</h1>
 		<ul>
 			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
+			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
 			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
@@ -57,6 +59,7 @@
 
 	<h1>Welcome Volunteer</h1>
 		<ul>
+			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
 			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
 		</ul>

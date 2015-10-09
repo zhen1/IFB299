@@ -16,7 +16,8 @@
 			$result = mysqli_fetch_assoc($query);
 			if($result == NULL)
 			{
-				echo "Incorrect username or password";
+				echo "<p class='unsuccessful'>Incorrect username or password, please try again.</p>";
+
 			}
 			else
 			{
@@ -32,13 +33,13 @@
 					}
 					else
 					{
-						echo "User is not approved";
+						echo "<p class='unsuccessful'>User is not approved</p>";
 					}
 					
 				}
 				else
 				{
-					echo "Incorrect username or password";
+					echo "<p class='unsuccessful'>Incorrect username or password, please try again.</p>";
 				}
 			}
 
@@ -46,22 +47,22 @@
 	?>
 	<title>Login</title>
 	<h1>System Login</h1>
-	<section id="logincontent">
 		<p>Please enter your username and password to continue.</p>
-		<form action="" method="POST">
+		<form action="" method="POST" autocomplete="off">
 			<table>
 			<tr>
-			<td>Username: </td><td><input type="text" name="username" placeholder="Username" required></td>
+			<td>Username: </td><td><input type="text" name="username" placeholder="Username" required></td><td rowspan="3">
+				<img alt="Padlock" height="10%" longdesc="Padlock" src="images/padlock.png" width="10%"></td>
 			</tr>
 			<tr>
 			<td>Password: </td><td><input type="password" name="password" placeholder="Password" required></td>
 			</tr>
 			<tr>
-			<td></td><td><input type="submit" name="submit" value="Login" /></td>
+			<td></td><td>
+				<input type="submit" name="submit" value="Login" /></td>
 			</tr>
 		</table>
 		</form>
 		<p><a href="signup.php">I don't have an account</a></p>
-	</section>
 	
 <?php require("templates/footer.php"); ?>
