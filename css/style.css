@@ -34,12 +34,12 @@
 
 #menu a {
   text-decoration: none;
-  color: #00F;
+  color: #00F !important;
   padding: 8px 8px 8px 8px;
 }
 
 #menu a:hover {
-  color: #F90;
+  color: #F90 !important;
   background-color: #FFF;
 }
 .searchResults {
@@ -71,4 +71,17 @@ body {
 input[type=submit] {
 	font-size: x-large;
 	font-weight: bold;
+}
+a:hover {
+	color: #0000FF !important;
+	font-weight: bold;
+}
+a:visited {
+	color: #000000;
+}
+a:link {
+	color: #000000;
+}
+a {
+	cursor: default;
 }

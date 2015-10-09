@@ -104,6 +104,6 @@ with * are required to be completed.</p>
 	</table>
 </form>
 <hr>
-<p><a href="job_home.php">Cancel</a></p>
+<p><a href="job_home.php">Back to Jobs Menu</a></p>
 
 <?php require("../templates/footer.php"); ?>
