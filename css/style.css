@@ -68,3 +68,7 @@ body {
 	text-decoration: underline blink;
 	font-size: large;
 }
+input[type=submit] {
+	font-size: x-large;
+	font-weight: bold;
+}
