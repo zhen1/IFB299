@@ -52,7 +52,7 @@
 			<table>
 			<tr>
 			<td>Username: </td><td><input type="text" name="username" placeholder="Username" required></td><td rowspan="3">
-				<img alt="Padlock" height="10%" longdesc="Padlock" src="images/padlock.png" width="10%"></td>
+				<img alt="Padlock" longdesc="Padlock" src="images/padlock.png" width="10%"></td>
 			</tr>
 			<tr>
 			<td>Password: </td><td><input type="password" name="password" placeholder="Password" required></td>
