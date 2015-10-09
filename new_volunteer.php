@@ -26,9 +26,11 @@
 			}
 			else
 			{
-				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$pass', '$email', 'Volunteer', '0')"); 
+				$password = password_hash($pass, PASSWORD_DEFAULT);
+
+				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$password', '$email', 'Volunteer', '0')"); 
 				echo("User created successfully");
-				header("Location:home.php");
+				header("Location:home.php?success=2");
 			}
 		}
 		mysql_close();

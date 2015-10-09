@@ -3,6 +3,16 @@ require("../templates/header_sub.php");
 require("../db_connect.php");
 $account = $_SESSION['Username'];
 ?>
+	<h1>Change Password</h1>
+	
+	<em class="unsuccessful"><?php
+	if (isset($_GET["success"])) {
+		$success = $_GET['success'];
+			if ($success == "0") {
+				echo ("Error, The passwords did not match. Please try again!");
+			}
+	} ?></em>
+
 	<link rel="stylesheet" href="../css/style.css">
 	<title>Update <?=$account?>'s Password</title>
 

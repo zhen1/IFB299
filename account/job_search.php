@@ -65,6 +65,9 @@ $account = $_SESSION['Username'];
 		
 		$i++;
 	}
+	if ($i == 0) {
+	echo "No Results Found";
+	}
 
 	
 ?>

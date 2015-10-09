@@ -1,6 +1,38 @@
 <?php require("templates/header.php"); ?>
 
 <title>Home</title>
+<em class="successful"><?php
+	if (isset($_GET["success"])) {
+		$success = $_GET['success'];
+			if ($success == "1") {
+				echo ("Account Created Successfully!");
+			}
+	}  ?></em>
+<em class="successful"><?php
+	if (isset($_GET["success"])) {
+		$success = $_GET['success'];
+			if ($success == "2") {
+				echo ("Account Created Successfully! Please see a manager to have the account activated.");
+			}
+	}  ?></em>
+	
+<em class="successful"><?php
+	if (isset($_GET["success"])) {
+		$success = $_GET['success'];
+			if ($success == "3") {
+				echo ("Password was changed successfully. Please login again with your new password.");
+			}
+	}  ?></em>
+
+
+<em class="unsuccessful"><?php
+	if (isset($_GET["success"])) {
+		$success = $_GET['success'];
+			if ($success == "0") {
+				echo ("Error! Unsuccessful, Please try again!");
+			}
+	} ?></em>
+
 
 <?php if($_SESSION['user_type'] == 'Admin'){ ?>
 
