@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<title><?=$account?>'s Account </title>
 
-<?php require("../templates/account_menu_sub.php") ?>
+<?php //commented out as not located in the accounts menu anymore require("../templates/account_menu_sub.php") ?>
 
 <?php
 	$id = $_POST['jobid'];
