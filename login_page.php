@@ -47,7 +47,6 @@
 	?>
 	<title>Login</title>
 	<h1>System Login</h1>
-	<section id="logincontent">
 		<p>Please enter your username and password to continue.</p>
 		<form action="" method="POST" autocomplete="off">
 			<table>
@@ -59,11 +58,11 @@
 			<td>Password: </td><td><input type="password" name="password" placeholder="Password" required></td>
 			</tr>
 			<tr>
-			<td></td><td><input type="submit" name="submit" value="Login" /></td>
+			<td></td><td>
+				<input type="submit" name="submit" value="Login" /></td>
 			</tr>
 		</table>
 		</form>
 		<p><a href="signup.php">I don't have an account</a></p>
-	</section>
 	
 <?php require("templates/footer.php"); ?>
