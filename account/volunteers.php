@@ -3,7 +3,6 @@ require("../db_connect.php");
 require("../templates/header_sub.php"); 
 ?>
 
-<link rel="stylesheet" href="../css/style.css">
 <title>Volunteers</title>
 
 <?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
@@ -19,7 +18,14 @@ require("../templates/header_sub.php");
 		$result = mysql_query($query);
 		$row = mysql_num_rows($result);
 		$i = 0;
-		echo "<h1>User Accounts - Volunteers</h1>";
+		echo "
+			<h1>User Accounts Approvals</h1>
+			<h2>Volunteers</h2>
+			<hr /><hr />
+			<p class='information'>All volunteer accounts are listed here and can be activated or deactivated</p>
+			<p class='successful'>".$row." Accounts Found</p>
+			";
+			
 		while ($i < $row)
 		{
 			$user = mysql_result($result, $i, "Username");
@@ -34,13 +40,14 @@ require("../templates/header_sub.php");
 			{
 				$approved = 'No';
 			}
-			
+						
 			echo
 			"
 			<tr><td><b>Username: </b></td><td>$user</td></tr><br/>
 			<tr><td><b>Email: </b></td><td>$email</td></tr><br/>
-			<tr><td><b>Approved: </b></td><td>$approved</td></tr><br/>
+			<tr><td><b>Account Active: </b></td><td>$approved</td></tr><br/>
 			";
+
 			if ($approved == 'Yes')
 			{
 				echo
@@ -48,7 +55,7 @@ require("../templates/header_sub.php");
 				<form action='edit_volunteer.php' method='POST'>
 					<input type='hidden' name='user' value='$user'>
 					<input type='hidden' name='set' value='0'/>
-					<input type='submit' value='Cancal User' />
+					<input type='submit' value='Deactivate Account' />
 				</form>
 				<br/>
 				";
@@ -60,7 +67,7 @@ require("../templates/header_sub.php");
 				<form action='edit_volunteer.php' method='POST'>
 					<input type='hidden' name='user' value='$user'>
 					<input type='hidden' name='set' value='1'/>
-					<input type='submit' value='Approve User' />
+					<input type='submit' value='Activate Account' />
 				</form>
 				<br/>
 				";
