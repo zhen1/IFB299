@@ -6,7 +6,7 @@ page for searching the database for existing migrant users.
 
 <title>Customer Management System - Main Menu</title>
 
-<h1>Customer Management System</h1>		
+<h1>Migrant User Management</h1>		
 <hr>
 <hr>
 <p class="information">Please complete the form to search for an exisiting 

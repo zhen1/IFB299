@@ -7,7 +7,7 @@ Main page for the migrant user/customer database functions. This page links to o
 <link rel="stylesheet" href="../css/style.css">
 <title>Customer Management System - Main Menu</title>
 
-<h1>Customer Management System</h1>		
+<h1>Migrant User Management</h1>		
 <hr>
 <hr>
 <p class="information">Add a new migrant account.</p>
