@@ -6,7 +6,7 @@ $account = $_SESSION['Username'];
 
 <link rel="stylesheet" href="../css/style.css">
 <title><?=$account?>'s Account </title>
-
+<h1>Account Details</h1>
 <?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
 
 <?php

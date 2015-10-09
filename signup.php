@@ -28,8 +28,9 @@
 			}
 			else
 			{
-				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$pass', '$email', '$phone', '$address', 'Migrant', '1')"); 
-				header("Location:home.php");
+				$password = password_hash($pass, PASSWORD_DEFAULT);
+				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$password', '$email', '$phone', '$address', 'Migrant', '1')"); 
+				header("Location:home.php?success=1");
 			}
 		}
 		mysql_close();

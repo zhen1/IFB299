@@ -20,7 +20,8 @@
 			}
 			else
 			{
-				if($result['Password'] == $pass)
+				$hash = $result['Password'];
+				if(password_verify($pass, $hash))
 				{
 					if($result['Approved'] == 1)
 					{
