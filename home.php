@@ -37,39 +37,53 @@
 <?php if($_SESSION['user_type'] == 'Admin'){ ?>
 
 
-	<h1>Welcome Admin</h1>
+	<h1>Main Menu</h1>
+	<h2>Welcome Admin</h2>
+		<hr><hr>
 		<ul>
 			<li><a href="account/manager.php">View/Update Manager Accounts</a></li>
 			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
 			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
-			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
+			<li><a href="jobs/job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
+		<hr />
 <?php } else if($_SESSION['user_type'] == 'Manager') { ?>
 
-	<h1>Welcome Manager</h1>
+	<h1>&nbsp;Main Menu</h1>
+<h2>Welcome Manager</h2>
+		<hr><hr>
 		<ul>
 			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
 			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
-			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
+			<li><a href="jobs/job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
+		<hr />
 	
 <?php } else if($_SESSION['user_type'] == 'Volunteer') { ?>
 
-	<h1>Welcome Volunteer</h1>
+	<h1>&nbsp;Main Menu</h1>
+<h2>Welcome Volunteer</h2>
+<hr><hr>
+
 		<ul>
 			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
-			<li><a href="job_home.php">Work Orders (Jobs)</a></li>
+			<li><a href="jobs/job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
+		<hr />
 	
 <?php } else if($_SESSION['user_type'] == 'Migrant') { ?>
 
-	<h1>Welcome Migrant</h1>
+	<h1>&nbsp;Main Menu</h1>
+<h2>Welcome User</h2>
+<hr><hr>
+
 		<ul>
-			<li><a href="account/job_status.php">Job Status</a></li>
+			<li><a href="jobs/job_status.php">Job Status</a></li>
 		</ul>
+		<hr />
 	
 <?php } else { ?>
 
