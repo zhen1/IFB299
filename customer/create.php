@@ -29,7 +29,7 @@ require("../templates/header_sub.php"); ?>
 			$lname = $_POST['lname'];
 			$user = $_POST['user'];
 			$pass = rand(1000000, 9999999);
-			echo "<p class='successful'> The password generated for the new account is '".$pass."'. Please advise the customer to change their password ASAP.<br/></p>";
+			echo "<p class='successful'> The password generated for the new account is '".$pass."'. Please advise the customer that they will need to select a password at first logon.<br/></p>";
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$address = $_POST['address'];
@@ -46,7 +46,7 @@ require("../templates/header_sub.php"); ?>
 			{
 				$validUser = 1;
 				$password = password_hash($pass, PASSWORD_DEFAULT);
-				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, Suburb, Postcode, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$password', '$email', '$phone', '$address', '$suburb', '$postcode', 'Migrant', '1')");
+				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, Suburb, Postcode, UserLevel, Approved, PasswordExpired) VALUES ('$fname', '$lname', '$user', '$password', '$email', '$phone', '$address', '$suburb', '$postcode', 'Migrant', '1', '1')");
 				echo '<p class="successful">User Added Successfully!</p>'; 
 			}
 		}

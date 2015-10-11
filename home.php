@@ -34,7 +34,7 @@
 	} ?></em>
 
 
-<?php if($_SESSION['user_type'] == 'Admin'){ ?>
+<?php if($_SESSION['user_type'] == 'Admin' && $_SESSION['logged_in'] == true){ ?>
 
 
 	<h1>Main Menu</h1>
@@ -48,7 +48,7 @@
 			<li><a href="jobs/job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
 		<hr />
-<?php } else if($_SESSION['user_type'] == 'Manager') { ?>
+<?php } else if($_SESSION['user_type'] == 'Manager' && $_SESSION['logged_in'] == true) { ?>
 
 	<h1>&nbsp;Main Menu</h1>
 <h2>Welcome Manager</h2>
@@ -61,7 +61,7 @@
 		</ul>
 		<hr />
 	
-<?php } else if($_SESSION['user_type'] == 'Volunteer') { ?>
+<?php } else if($_SESSION['user_type'] == 'Volunteer' && $_SESSION['logged_in'] == true) { ?>
 
 	<h1>&nbsp;Main Menu</h1>
 <h2>Welcome Volunteer</h2>
@@ -74,7 +74,7 @@
 		</ul>
 		<hr />
 	
-<?php } else if($_SESSION['user_type'] == 'Migrant') { ?>
+<?php } else if($_SESSION['user_type'] == 'Migrant' && $_SESSION['logged_in'] == true) { ?>
 
 	<h1>&nbsp;Main Menu</h1>
 <h2>Welcome User</h2>
