@@ -7,14 +7,14 @@ Main page for the migrant user/customer database functions. This page links to o
 <link rel="stylesheet" href="../css/style.css">
 <title>Customer Management System - Main Menu</title>
 
-<h1>Migrant User Management</h1>		
+<h1>Customer Management</h1>		
 <hr>
 <hr>
-<p class="information">Add a new migrant account.</p>
-<p><a href="customer/add.php">Add Migrant</a></p>
+<p class="information">Add a new customer account.</p>
+<p><a href="customer/create.php">Add Customer</a></p>
 <hr>
-<p class="information">Search for an existing migrant account.</p>
-<p><a href="customer/search.php">Search Migrant Accounts</a></p>
+<p class="information">Search for an existing customer account.</p>
+<p><a href="customer/search.php">Search Customer Accounts</a></p>
 
 <hr>
 
