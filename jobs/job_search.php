@@ -30,7 +30,7 @@ $account = $_SESSION['Username'];
 	echo "<h2>Job Number Search Results</h2>";
 	echo "<hr /><hr />";
 	if ($row > 0){
-	echo "<p class='successful'>".$row." match found</p>";
+	echo "<p class='successful'>".$row." Matches Found</p>";
 	} else {
 	echo "<p class='unsuccessful'>No Matches Found</p>";
 	}

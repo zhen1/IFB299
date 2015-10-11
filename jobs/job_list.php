@@ -18,6 +18,11 @@
 	$i = 0;
 	
 	echo "<h1>All Jobs - Search Result</h1>";
+	if ($row > 0){
+		echo "<p class='successful'>".$row." Matches Found</p>";
+	} else {
+		echo "<p class='unsuccessful'>No Matches Found</p>";
+	}
 	while ($i < $row)
 	{
 		$jobNumber = mysql_result($result, $i, "jobNumber"); 
