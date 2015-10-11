@@ -9,17 +9,29 @@ page for searching the database for existing migrant users.
 <h1>Migrant User Management</h1>		
 <hr>
 <hr>
-<p class="information">Please complete the form to search for an exisiting 
+<p class="information">Please complete the form to search for an existing
 client.</p>
 
 
 
 
-<form action="" method="post" autocomplete="off">
+<form action="search_results.php" method="post" autocomplete="off">
 <table>
-<tr><td>Search Terms: </td><td colspan="2">
-	<input name="lastName" type="text" style="width: 197px" /></td></tr>
-<tr><td>Criteria to Seach:	</td><td>Last Name:<input name="Radio1" type="radio" /></td><td>Phone Number:<input name="Radio1" type="radio" /></td><td>Client Number:<input name="Radio1" type="radio" /></td></tr>
+<tr><td style="height: 42px">Enter Search: </td>
+	<td colspan="2" style="height: 42px">
+	<input name="search_box" type="text" /></td></tr>
+<tr><td>Search By:	</td>
+
+<td>Last Name:</td><td><input name="radioGroup1" type="radio" value="lastName" required/></td></tr>
+
+<tr><td></td><td>Phone Number:</td><td>
+	<input name="radioGroup1" type="radio" value="phoneNumber" required/></td></tr>
+
+<tr><td></td><td>Client Number:</td><td>
+	<input name="radioGroup1" type="radio" value="clientNumber" required /></td></tr>
+
+<tr><td></td><td><input name="searchButton" type="submit" value="Search"/></td></tr>
+
 </table>
 </form>
 
