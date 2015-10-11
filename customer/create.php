@@ -12,23 +12,24 @@
 		
 		
 
-require("templates/header.php"); ?>
+require("../templates/header_sub.php"); ?>
 
-<title>Signup</title>
+<title>Customer Management - New Customer</title>
 
 
-	<h1>New Customer Signup</h1>
-	<p>Please complete this form to signup for a new account. All fields must be 
-	completed.</p>
+	<h1>Customer Management</h1>
+	<h2>Add New Customer</h2>
+	<hr /><hr />
+	<p class="information">Complete the form to add a new customer.</p>
 	<?php
 			$validUser = 1;
-			if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['pass1']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['address']) && isset($_POST['suburb']) && isset($_POST['postcode']))
+			if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['user']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['address']) && isset($_POST['suburb']) && isset($_POST['postcode']))
 		{
 			$fname = $_POST['fname'];
 			$lname = $_POST['lname'];
 			$user = $_POST['user'];
-			$pass = $_POST['pass'];
-			$pass1 = $_POST['pass1'];
+			$pass = rand(1000000, 9999999);
+			echo "<p class='successful'> The password generated for the new account is '".$pass."'. Please advise the customer that they will need to select a password at first logon.<br/></p>";
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$address = $_POST['address'];
@@ -41,23 +42,19 @@ require("templates/header.php"); ?>
 				echo '<p class="unsuccessful">Username already taken. Please try again.</p>';
 				$validUser = 0;
 			}
-			else if ($pass != $pass1) {
-				echo '<p class="unsuccessful">Passwords did not match please try again!</p>';
-				$validUser = 0;
-			}
 			else
 			{
 				$validUser = 1;
 				$password = password_hash($pass, PASSWORD_DEFAULT);
-				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, Suburb, Postcode, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$password', '$email', '$phone', '$address', '$suburb', '$postcode', 'Migrant', '1')"); 
-				header("Location:home.php?success=1");
+				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, Suburb, Postcode, UserLevel, Approved, PasswordExpired) VALUES ('$fname', '$lname', '$user', '$password', '$email', '$phone', '$address', '$suburb', '$postcode', 'Migrant', '1', '1')");
+				echo '<p class="successful">User Added Successfully!</p>'; 
 			}
 		}
 		mysql_close();
 		
 ?> 
 
-	<form action="signup.php" method="POST" autocomplete="off">
+	<form action="create.php" method="POST" autocomplete="off">
 		<table>
 		<tr>
 		<td>First Name:</td><td><input type="text" name="fname" <?php if ($validUser == 0){ echo 'value="'.$fname.'"'; }?> required/></td>
@@ -67,12 +64,6 @@ require("templates/header.php"); ?>
 		</tr>
 		<tr>
 		<td>Username:</td><td><input type="text" name="user" <?php if ($validUser == 0){ echo 'value="'.$user.'"'; }?> required/></td>
-		</tr>
-		<tr>
-		<td>Password:</td><td><input type="password" name="pass" required /></td>
-		</tr>
-		<tr>
-		<td>Repeat Password:</td><td><input type="password" name="pass1" required /></td>
 		</tr>
 		<tr>
 		<td>Email:</td><td><input type="text" name="email" <?php if ($validUser == 0){ echo 'value="'.$email.'"'; }?> required/></td>
@@ -97,6 +88,6 @@ require("templates/header.php"); ?>
 	</tr>
 	</table>
 	</form>
-	<p><a href="new_volunteer.php">Volunteer Signup</a></p>
+	<p><a href="../customer.php">Back to Customer Management</a></p>
 	
-<?php require("templates/footer.php"); ?>
+<?php require("../templates/footer.php"); ?>

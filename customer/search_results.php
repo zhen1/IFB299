@@ -37,7 +37,7 @@ $account = $_SESSION['Username'];
 	$i = 0;
 	$row = mysql_num_rows($result);
 	
-	echo "<h1>Migrant User Management</h1>";
+	echo "<h1>Customer Management</h1>";
 	echo "<h2>Search Results for '".$search_terms."'</h2>";
 	echo "<hr /><hr />";
 	if ($row > 0){
@@ -82,7 +82,7 @@ $account = $_SESSION['Username'];
 		$i++;
 	}
 	echo "<hr />";
-	echo "<p><a href='../customer.php'>Back to Migrant User Management</a></p>";
+	echo "<p><a href='../customer.php'>Back to Customer Management</a></p>";
 	
 ?>
 

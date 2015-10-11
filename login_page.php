@@ -26,10 +26,15 @@
 				{
 					if($result['Approved'] == 1)
 					{
-						$_SESSION['logged_in'] = true;
 						$_SESSION['Username'] = $user;
 						$_SESSION['user_type'] = $result["UserLevel"];
+						if($result['PasswordExpired'] == 1){
+							$_SESSION['logged_in'] = false;
+							header("Location:expired_password.php");
+						} else {
+						$_SESSION['logged_in'] = true;
 						header("Location:home.php");
+						}
 					}
 					else
 					{
