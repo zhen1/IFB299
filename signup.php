@@ -17,7 +17,7 @@ require("templates/header.php"); ?>
 <title>Signup</title>
 
 
-	<h1>New Migrant User Signup</h1>
+	<h1>New Customer Signup</h1>
 	<p>Please complete this form to signup for a new account. All fields must be 
 	completed.</p>
 	<?php
@@ -50,7 +50,7 @@ require("templates/header.php"); ?>
 				$validUser = 1;
 				$password = password_hash($pass, PASSWORD_DEFAULT);
 				mysql_query("INSERT INTO $table (FirstName, LastName, Username, Password, Email, PhoneNumber, Address, Suburb, Postcode, UserLevel, Approved) VALUES ('$fname', '$lname', '$user', '$password', '$email', '$phone', '$address', '$suburb', '$postcode', 'Migrant', '1')"); 
-				//header("Location:home.php?success=1");
+				header("Location:home.php?success=1");
 			}
 		}
 		mysql_close();
