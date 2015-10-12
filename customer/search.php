@@ -17,9 +17,9 @@ client.</p>
 
 <form action="search_results.php" method="post" autocomplete="off">
 <table>
-<tr><td style="height: 42px">Enter Search: </td>
-	<td colspan="2" style="height: 42px">
-	<input name="search_box" type="text" /></td></tr>
+<tr><td>Enter Search: </td>
+	<td colspan="2">
+	<input name="search_box" type="text" required/></td></tr>
 <tr><td>Search By:	</td>
 
 <td>Last Name:</td><td><input name="radioGroup1" type="radio" value="lastName" required/></td></tr>
