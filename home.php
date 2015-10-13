@@ -34,7 +34,7 @@
 	} ?></em>
 
 
-<?php if($_SESSION['user_type'] == 'Admin' && $_SESSION['logged_in'] == true){ ?>
+<?php if($_SESSION['user_type'] == 'Admin'){ ?>
 
 
 	<h1>Main Menu</h1>
@@ -43,12 +43,13 @@
 		<ul>
 			<li><a href="account/manager.php">View/Update Manager Accounts</a></li>
 			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
+			<li><a href="scheduling/volunteer_roster.php">View/Update Duty Roster for Volunteer</a></li>
 			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
 			<li><a href="jobs/job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
 		<hr />
-<?php } else if($_SESSION['user_type'] == 'Manager' && $_SESSION['logged_in'] == true) { ?>
+<?php } else if($_SESSION['user_type'] == 'Manager') { ?>
 
 	<h1>&nbsp;Main Menu</h1>
 <h2>Welcome Manager</h2>
@@ -61,20 +62,21 @@
 		</ul>
 		<hr />
 	
-<?php } else if($_SESSION['user_type'] == 'Volunteer' && $_SESSION['logged_in'] == true) { ?>
+<?php } else if($_SESSION['user_type'] == 'Volunteer') { ?>
 
 	<h1>&nbsp;Main Menu</h1>
 <h2>Welcome Volunteer</h2>
 <hr><hr>
 
 		<ul>
+			<li><a href="scheduling/view_my_roster.php">View My Duty Roster</a></li>
 			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
 			<li><a href="jobs/job_home.php">Work Orders (Jobs)</a></li>
 		</ul>
 		<hr />
 	
-<?php } else if($_SESSION['user_type'] == 'Migrant' && $_SESSION['logged_in'] == true) { ?>
+<?php } else if($_SESSION['user_type'] == 'Migrant') { ?>
 
 	<h1>&nbsp;Main Menu</h1>
 <h2>Welcome User</h2>
