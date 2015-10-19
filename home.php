@@ -41,6 +41,8 @@
 	<h2>Welcome Admin</h2>
 		<hr><hr>
 		<ul>
+			<li><a href="account/upgrade.php">Edit User Access Level</a></li>
+			<li><a href="account/admin.php">View/Update Admin Accounts</a></li>
 			<li><a href="account/manager.php">View/Update Manager Accounts</a></li>
 			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
 			<li><a href="scheduling/volunteer_roster.php">View/Update Duty Roster for Volunteer</a></li>
