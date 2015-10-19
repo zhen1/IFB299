@@ -6,8 +6,6 @@ $account = $_SESSION['Username'];
 <link rel="stylesheet" href="../css/style.css">
 <title><?=$account?>'s Account </title>
 
-<?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
-
 <?php
 	$dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
 	$selecttable = mysql_select_db($database, $dbhandle);
