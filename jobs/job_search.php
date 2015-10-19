@@ -26,7 +26,14 @@ $account = $_SESSION['Username'];
 	$i = 0;
 	$row = mysql_num_rows($result);
 	
-	echo "<h1>Job Search Results</h1>";
+	echo "<h1>Work Orders (Jobs)</h1>";
+	echo "<h2>Job Number Search Results</h2>";
+	echo "<hr /><hr />";
+	if ($row > 0){
+	echo "<p class='successful'>".$row." Matches Found</p>";
+	} else {
+	echo "<p class='unsuccessful'>No Matches Found</p>";
+	}
 	while ($i < $row)
 	{
 		$jobNumber = mysql_result($result, $i, "jobNumber"); 
@@ -65,7 +72,8 @@ $account = $_SESSION['Username'];
 		
 		$i++;
 	}
-
+	echo "<hr />";
+	echo "<p><a href='job_home.php'>Back to Jobs Menu</a></p>";
 	
 ?>
 
