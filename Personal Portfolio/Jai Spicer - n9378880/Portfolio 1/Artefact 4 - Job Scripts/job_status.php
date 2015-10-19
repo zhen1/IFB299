@@ -17,8 +17,7 @@ $account = $_SESSION['Username'];
 	$query = "SELECT * FROM $table WHERE Username = '$account'";
 	$result = mysql_query($query);
 	
-	//$id = mysql_result($result, 0, "ID");
-	$id = '156';
+	$id = mysql_result($result, 0, "ID");
 	
 	$job_table = "jobs";
 	$job_query = "SELECT * FROM $job_table WHERE customerID = '$id'";
