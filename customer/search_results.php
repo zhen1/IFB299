@@ -77,6 +77,12 @@ $account = $_SESSION['Username'];
 		<tr><td><input value='$ID' name='client_id' type='hidden' /></td>
 		<td><input type='submit' value='Update Information' /></td></tr>
 		</form>
+		
+		<form action='../account/reset_password.php' method='POST'>
+			<input type='hidden' name='user' value='$username'>
+			<input type='submit' value='Reset Password' />
+		</form>
+		<br />
 		";
 		
 		$i++;
