@@ -7,9 +7,6 @@ $account = $_SESSION['Username'];
 <link rel="stylesheet" href="../css/style.css">
 <title>Managers</title>
 
-<?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
-
-
 <?php
 	$search;
 	if(!isset($search))
@@ -58,6 +55,12 @@ $account = $_SESSION['Username'];
 					<input type='hidden' name='set' value='0'/>
 					<input type='submit' value='Deactivate Account' />
 				</form>
+				<form action='reset_password.php' method='POST'>
+					<input type='hidden' name='user' value='$user'>
+					<input type='hidden' name='set' value='0'/>
+					<input type='submit' value='Reset Password' />
+				</form>
+
 				<br/>
 				";
 			}
@@ -70,6 +73,13 @@ $account = $_SESSION['Username'];
 					<input type='hidden' name='set' value='1'/>
 					<input type='submit' value='Activate Account' />
 				</form>
+				
+				<form action='reset_password.php' method='POST'>
+					<input type='hidden' name='user' value='$user'>
+					<input type='hidden' name='set' value='0'/>
+					<input type='submit' value='Reset Password' />
+				</form>
+
 				<br/>
 				";
 			}
