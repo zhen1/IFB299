@@ -22,7 +22,7 @@ $account = $_SESSION['Username'];
 			<h1>User Accounts Approvals</h1>
 			<h2>Managers</h2>
 			<hr /><hr />
-			<p class='information'>All manager accounts are listed here and can be activated or deactivated</p>
+			<p class='information'>All manager accounts are listed here and can be activated, deactivated or have its password reset.</p>
 			<p class='successful'>".$row." Accounts Found</p>
 			";
 		while ($i < $row)

@@ -12,18 +12,18 @@
 
 	$userid = $_POST['user'];
 	$pass = rand(1000000, 9999999);
-	
-	$userinfo = "SELECT * FROM $table WHERE ID='$userid'";
-	$result = mysql_query($query);
-	$username = mysql_result($result, $i, "Username");
 		
-	$password = password_hash($pass, PASSWORD_DEFAULT);
-	$update = " UPDATE $table SET Password='$password' WHERE Username='$account'";
+	$newpassword = password_hash($pass, PASSWORD_DEFAULT);
+	$update = " UPDATE $table SET Password='$newpassword' WHERE Username='$userid'";
+	$expirepass = " UPDATE $table SET PasswordExpired=1 WHERE Username='$userid'";
 	mysql_query($update);
+	mysql_query($expirepass);
 	mysql_close();
 ?>
 <h1>Password Reset</h1>
 <hr><hr>
 <?php
-echo "<p class='successful'> The account with username '".$username."' has had its password reset to '".$pass."'. Please advise the user that they will need to select a password at the next logon.</p>";
+echo "<p class='successful'> The account with username '".$userid."' has had its password reset to '".$pass."'. Please advise the user that they will need to select a password at the next logon.</p>";
 ?>
+<hr />
+<p><a href="../home.php">Back to Home</a></p>
