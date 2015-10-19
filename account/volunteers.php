@@ -5,8 +5,6 @@ require("../templates/header_sub.php");
 
 <title>Volunteers</title>
 
-<?php //commented out due to moving the functions from accounts to home page require("../templates/account_menu_sub.php") ?>
-
 <?php
 	$search;
 	if(!isset($search))
@@ -22,7 +20,7 @@ require("../templates/header_sub.php");
 			<h1>User Accounts Approvals</h1>
 			<h2>Volunteers</h2>
 			<hr /><hr />
-			<p class='information'>All volunteer accounts are listed here and can be activated or deactivated</p>
+			<p class='information'>All volunteer accounts are listed here and can be activated, deactivated or have its password reset.</p>
 			<p class='successful'>".$row." Accounts Found</p>
 			";
 			
@@ -57,6 +55,11 @@ require("../templates/header_sub.php");
 					<input type='hidden' name='set' value='0'/>
 					<input type='submit' value='Deactivate Account' />
 				</form>
+
+				<form action='reset_password.php' method='POST'>
+					<input type='hidden' name='user' value='$user'>
+					<input type='submit' value='Reset Password' />
+				</form>		
 				<br/>
 				";
 			}
@@ -68,6 +71,11 @@ require("../templates/header_sub.php");
 					<input type='hidden' name='user' value='$user'>
 					<input type='hidden' name='set' value='1'/>
 					<input type='submit' value='Activate Account' />
+				</form>
+
+				<form action='reset_password.php' method='POST'>
+					<input type='hidden' name='user' value='$user'>
+					<input type='submit' value='Reset Password' />
 				</form>
 				<br/>
 				";
