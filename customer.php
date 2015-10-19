@@ -10,6 +10,22 @@ Main page for the migrant user/customer database functions. This page links to o
 <h1>Customer Management</h1>		
 <hr>
 <hr>
+
+<em class="successful"><?php
+	if (isset($_GET["success"])) {
+		$success = $_GET['success'];
+			if ($success == "1") {
+				echo ("Record Updated Successfully!");
+			}
+	}  ?></em>
+<em class="unsuccessful"><?php
+	if (isset($_GET["success"])) {
+		$success = $_GET['success'];
+			if ($success == "0") {
+				echo ("Error! Unsuccessful, Please try again!");
+			}
+	} ?></em>
+
 <p class="information">Add a new customer account.</p>
 <p><a href="customer/create.php">Add Customer</a></p>
 <hr>
