@@ -12,10 +12,10 @@ $account = $_SESSION['Username'];
 <?php
 	$con = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
 	$database = mysql_select_db($database, $con);
-	$job_id = $_POST['jobid'];
+	$jobid = $_POST['jobid'];
 	
 	$job_table = "jobs";
-	$job_query = "SELECT * FROM $job_table WHERE jobnumber = '$job_id'";
+	$job_query = "SELECT * FROM $job_table WHERE jobnumber = '$jobid'";
 	$job_result = mysql_query($job_query);
 	$i = 0;
 	$row = mysql_num_rows($job_result);
@@ -48,9 +48,9 @@ $account = $_SESSION['Username'];
 		<tr><td><b>Notes: </b></td><td>$notes</td></tr><br/>
 		<tr><td><b>Rating: </b></td><td>$rating/5</td></tr><br/>
 		<form action='save_rating.php' method='POST'>
-			<input value='$jobnumber' name='jobid' type='hidden' />
 			<input value='$rating' name='rating' />
-			<input type='submit' value='Rating' />
+			<input value='$jobnumber' name='job_id' type='hidden'/>
+			<input type='submit' value='Save' />
 		</form>
 		<br />
 		";
