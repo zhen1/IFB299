@@ -57,7 +57,6 @@ $account = $_SESSION['Username'];
 				</form>
 				<form action='reset_password.php' method='POST'>
 					<input type='hidden' name='user' value='$user'>
-					<input type='hidden' name='set' value='0'/>
 					<input type='submit' value='Reset Password' />
 				</form>
 
@@ -76,7 +75,6 @@ $account = $_SESSION['Username'];
 				
 				<form action='reset_password.php' method='POST'>
 					<input type='hidden' name='user' value='$user'>
-					<input type='hidden' name='set' value='0'/>
 					<input type='submit' value='Reset Password' />
 				</form>
 
