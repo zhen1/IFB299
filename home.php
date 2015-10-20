@@ -55,6 +55,7 @@
 <h2>Welcome Manager</h2>
 		<hr><hr>
 		<ul>
+			<li><a href="scheduling/volunteer_roster.php">View/Update Duty Roster for Volunteer</a></li>
 			<li><a href="account/volunteers.php">View/Update Volunteer Accounts</a></li>
 			<li><a href="customer.php">View/Update Customer Accounts</a></li>
 			<li><a href="contractor.php">Contractor Management</a></li>
