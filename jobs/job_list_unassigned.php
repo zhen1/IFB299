@@ -6,17 +6,19 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<title><?=$account?>'s Account </title>
 
+<?php //commented out due to moving the functions from accounts to home page require require("../templates/account_menu_sub.php") ?>
 
 <?php
 	$con = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
 	$database = mysql_select_db($database, $con);
 	$table = "jobs";
-	$query = "SELECT jobs.jobNumber, jobs.customerID, logins.FirstName AS clientFirstName, logins.LastName AS clientLastName, contractors.contractorID, contractors.businessName AS contractorAssigned, contractors.phoneNumber AS contractorContactNumber, jobs.jobType, jobs.jobDescription, jobs.jobStatus, jobs.progressNotes, jobs.lastUpdateDateTime AS lastUpdate FROM jobs INNER JOIN logins ON jobs.customerID=logins.ID LEFT JOIN contractors ON jobs.contractorID=contractors.contractorID ORDER BY jobNumber";
+	$query = "SELECT jobs.jobNumber, jobs.customerID, logins.FirstName AS clientFirstName, logins.LastName AS clientLastName, contractors.contractorID, contractors.businessName AS contractorAssigned, contractors.phoneNumber AS contractorContactNumber, jobs.jobType, jobs.jobDescription, jobs.jobStatus, jobs.progressNotes, jobs.lastUpdateDateTime AS lastUpdate FROM jobs INNER JOIN logins ON jobs.customerID=logins.ID LEFT JOIN contractors ON jobs.contractorID=contractors.contractorID WHERE jobs.contractorID IS NULL";
 	$result = mysql_query($query);
 	$row = mysql_num_rows($result);
 	$i = 0;
 	
-	echo "<h1>All Jobs - Search Result</h1>";
+	echo "<h1>Work Orders (Jobs)</h1>";
+	echo "<h2>Unassigned Jobs</h2>";
 	if ($row > 0){
 		echo "<p class='successful'>".$row." Matches Found</p>";
 	} else {
