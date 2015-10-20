@@ -35,6 +35,7 @@ $account = $_SESSION['Username'];
 		$jobstat = mysql_result($result, $i, "jobStatus");
 		$time = mysql_result($result, $i, "lastUpdateDateTime");
 		$notes = mysql_result($result, $i, "progressNotes");
+		$rating = mysql_result($result, $i, "Rating");
 		
 		echo 
 		"
@@ -46,7 +47,13 @@ $account = $_SESSION['Username'];
 		<tr><td><b>Job Status: </b></td><td>$jobstat</td></tr><br/>
 		<tr><td><b>Time Stamp: </b></td><td>$time</td></tr><br/>
 		<tr><td><b>Notes: </b></td><td>$notes</td></tr><br/>
+		<tr><td><b>Rating: </td></b><td>$rating/5</td></tr><br/>
+		<form action='job_details.php' method='POST'>
+			<input value='$jobnumber' name='jobid' type='hidden' />
+			<input type='submit' value='Edit' />
+		</form>
 		<br />
+
 		";
 		
 		$i++;
